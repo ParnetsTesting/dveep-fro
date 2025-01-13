@@ -1,0 +1,127 @@
+/* Header Component Styles */
+.header-button {
+  height: 45px;
+  width: 200px;
+  border-radius: 50px;
+  background-color: #176457;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  margin-left: 35px;
+  margin-top: -3px;
+  font-family: 'revicons';
+  font-weight: 500;
+  
+}
+
+.remove-anchor-tag {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.header-link-color {
+  font-weight: 900 !important;
+  font-family: 'revicons';
+  color: #fff !important;
+}
+
+.header-link-color:hover {
+  color: black !important;
+  text-decoration: underline !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .navbar-mobile {
+      background-color: #FFFFFF !important;
+      z-index: 9999;
+  }
+
+  .navbar-mobile .navbar-collapse {
+      background-color: #FFFFFF;
+      z-index: 9999;
+  }
+
+  .navbar-mobile .navbar-toggler {
+      background-color: #FFFFFF;
+      z-index: 9999;
+  }
+
+
+
+  /* Logo size adjustment for mobile */
+  .logo-header-mob {
+      height: 60px;
+  }
+
+  /* Adjust Navbar toggle position for smaller screens */
+  /* .navbar-toggler {
+      margin-left: 245px;
+      margin-top: -90px;
+  } */
+}
+
+@media only screen and (max-width: 600px) {
+  .header-button {
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-top: 20px;
+  }
+
+  .form-container1 {
+      text-align: center;
+      padding: 10px;
+  }
+
+  .f-forms1 {
+      width: 90%;
+      margin: 0 auto;
+  }
+
+  .selections1 {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .btn-callbacks1 {
+      width: 100%;
+  }
+
+  .logo-header-mob {
+      height: 50px;
+      width: auto;
+      margin: auto;
+  }
+
+  
+}
+@media (max-width: 991px) {
+  .navbar-toggler {
+    margin-left: auto; 
+    margin-right: 0px; 
+    margin-top: -57px;
+  }
+  .header-link-color{
+    font-size: 15px !important;
+    text-align: center;
+  }
+  .form-container1 {
+    position: relative;
+    width: 346px;
+    z-index: 9999;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-toggler {
+    margin-left: auto;
+    margin-right: 10px; 
+    margin-top: -57px;
+  }
+  .header-link-color{
+    font-size: 15px !important;
+    text-align: center;
+  }
+}

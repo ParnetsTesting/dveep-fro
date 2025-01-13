@@ -1,0 +1,345 @@
+.project-overview-image{
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+}
+.image-card {
+    width: 400px; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s; 
+    margin: 20px; 
+  }
+  .paragraph-about-project-heading{
+    font-size: 45px;
+    color: #176457;
+    font-weight: 700;
+    font-family: 'Roboto';
+  }
+  .card-image {
+    width: 100%;
+    height: 150px;
+        /* object-fit: cover; */
+    transition: transform 0.3s ease; 
+  }
+  .card-image:hover {
+    transform: scale(1.05); 
+  }
+  .image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+  .paragraph-about-project-paragraph{
+    text-align: justify;
+    font-family: serif;
+    font-size: 17px;
+  }
+  /* ============== */
+  /* .elementor.elementor .e-con>.elementor-widget {
+    max-width: 100%;
+}
+.e-con .elementor-widget.elementor-widget {
+    margin-block-end: 0;
+}
+.elementor-widget:not(:last-child) {
+    margin-block-end: 0px;
+}
+.e-con .elementor-widget {
+    min-width: 0;
+}
+.elementor-widget:not(:last-child) {
+    margin-bottom: 20px;
+}
+.elementor-element {
+    --widgets-spacing: 0px 0px;
+}
+.elementor-element, .elementor-lightbox {
+    background-color: #000;
+}
+.elementor-widget {
+    position: relative;
+} */
+
+/* Container and Title */
+/* Container and Title */
+.elementor-widget-container {
+  padding: 20px;
+  background-color: #f1faff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Roboto';
+}
+
+/* Property Grid List */
+.property-grid-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1000px; /* Ensure proper spacing */
+  gap: 20px; /* Add gap between cards */
+}
+
+.property-grid-list li {
+  display: flex;
+  align-items: center;
+  flex-grow: 0  !important;
+  flex: 1 1 calc(33.33% - 20px); /* 33.33% width per item minus spacing */
+  margin: 10px 0; /* Vertical spacing */
+  background-color: #176457;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Styling */
+.property-grid-list-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px; /* Space between image and text */
+}
+
+.property-grid-list-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Details Styling */
+.property-grid-list-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.property-grid-list-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 5px 0;
+}
+
+.property-grid-list-text {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-grid-list li {
+    flex: 1 1 calc(50% - 20px); /* 2 items per row on smaller screens */
+    flex-direction: column; /* Stack image above text on small screens */
+    text-align: center; /* Center-align text on small screens */
+  }
+  .property-grid-list-icon {
+    margin-right: 0; /* Remove margin on small screens */
+    margin-bottom: 10px; /* Add space below image */
+  }
+  .property-grid-list-details {
+    align-items: center; /* Center-align text on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .property-grid-list li {
+    flex: 1 1 100%; /* 1 item per row on small screens */
+  }
+}
+/* Container and Title */
+.features-amenities-container {
+  padding: 20px;
+  background-color: #f1faff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px; /* Adds space above to separate from other sections */
+}
+
+.features-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Row Styling */
+.features-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Column Styling */
+.features-column {
+  flex: 1 1 calc(25% - 20px); /* 4 columns in larger screens */
+  max-width: calc(25% - 20px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .features-column {
+    flex: 1 1 calc(33.33% - 20px); /* 3 columns in medium screens */
+    max-width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-column {
+    flex: 1 1 calc(50% - 20px); /* 2 columns in small screens */
+    max-width: calc(50% - 20px);
+  }
+  .video-mob-res{
+    height: 300px !important;
+    width: 300px !important;
+  }
+  .card-img-mob-res{
+    width: 300px !important;
+    height: 300px;
+  }
+  .paragraph-about-project-heading {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-column {
+    flex: 1 1 100%; /* 1 column in extra small screens */
+    max-width: 100%;
+  }
+}
+
+/* Checklist Styling */
+.features-checklist {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.features-checklist-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.tick-symbol {
+  margin-right: 10px;
+  color: #4caf50; /* Green tick mark symbol */
+  font-size: 18px; /* Adjust size as needed */
+  display: inline-block;
+  transform: rotate(25deg); /* Rotate the tick mark 45 degrees */
+  line-height: 1; /* Adjust line-height to align with text */
+}
+
+.features-checklist-item:last-child {
+  margin-bottom: 0; /* Remove margin from the last item */
+}
+/* Container for the project plan */
+.floor-plan{
+  text-align: left;
+  font-size: 45px;
+  font-weight: 700;
+  color: #176457;
+  padding-top: 45px;
+  font-family: 'Roboto';
+}
+.heading-of-project-plan{
+  font-weight: 700;
+  color: #176457;
+}
+.title-of-project-plan{
+  text-align: justify;
+}
+
+/* Responsive row layout */
+.rw-style{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Column styling */
+/* .mg-wg-jd {
+  flex: 1 1 50%; 
+  max-width: 50%;
+} */
+
+/* Image styling */
+.mg-wg-jd img {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .col-md-5 {
+    flex: 1 1 100%; /* Full width on small screens */
+    max-width: 100%;
+  }
+  .project-overview-image {
+    border-radius: 10px;
+    width: 100%;
+    height: 251px;
+}
+.paragraph-about-project-paragraph {
+  font-size: 14px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.floor-plan {
+font-size: 25px !important;
+padding-left: 10px;
+}
+.para-mob-res-6{
+  font-size: 14px !important;
+}
+.mg-wg-jd img{
+  width: 300px !important;
+  height: 250px !important;
+}
+.video-in-project-overview{
+  height: 225px;
+    margin-left: 13px;
+}
+.mob-res-video-2{
+  margin-top: 20px !important;
+}
+.elementor-widget-container{
+  margin-top: 137px !important;
+}
+}
+.video-background-image-in{
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/Images/Image5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.video-in-project-overview{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

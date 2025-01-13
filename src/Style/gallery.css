@@ -1,0 +1,71 @@
+/* General styles for gallery images and videos */
+.gallery-page-image,
+.video-design-in-gallery {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Ensure that the container does not overflow */
+.container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Remove the outline on all elements */
+* {
+    outline: none;
+}
+
+/* Tablet (landscape) and larger screens */
+@media (min-width: 768px) and (max-width: 991px) {
+    .gallery-page-image,
+    .video-design-in-gallery {
+        height: 250px;
+        width: 100%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    .gallery-page-image,
+    .video-design-in-gallery {
+        height: 200px;
+        width: 100%;
+    }
+
+    /* Ensure no overflow on mobile screens */
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Add padding to container for better alignment on mobile */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+.gallery::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:#176457;
+    opacity: 0.7;
+    z-index: -1;
+}
+.gallery>img{
+    height: 40vh;
+    width: 100%;
+}
+.gallery{
+    position: relative; /* Make sure the container is positioned */
+    z-index: 2; /* Give a higher z-index to the content */
+}

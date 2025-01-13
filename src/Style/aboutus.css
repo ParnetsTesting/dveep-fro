@@ -1,0 +1,406 @@
+
+
+#about::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:#176457;
+    opacity: 0.7;
+    z-index: -1;
+}
+#about>img{
+    height: 40vh;
+    width: 100%;
+}
+#about {
+    position: relative; /* Make sure the container is positioned */
+    z-index: 2; /* Give a higher z-index to the content */
+}
+
+.breadcrumbt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center align breadcrumb content */
+    height: 100%; /* Make it occupy the full height */
+    padding: 101px;
+    box-sizing: border-box;
+}
+
+#about1{
+    margin-top: 70px;
+}
+.back-clor-about-us {
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+.vision-mission-title{
+    font-size: 45px;
+    font-weight: 700;
+    padding-top: 30px;
+    color: #176457;
+    font-family: 'Roboto';
+}
+.vision-mission-paragraph{
+    text-align: justify;
+    padding-top: 25px;
+    font-size: 18px;
+    font-family: 'revicons';
+}
+.vision-mission-img{
+    margin-top: 30px;
+    border-radius: 20px;
+    height: 330px;
+    width: 600px;
+}
+.vision-mission-paragraph-2{
+    text-align: justify;
+    padding-top: 25px;
+    font-size: 18px;
+    padding-top: 100px;
+    font-family: 'revicons';
+}
+#vision-mission-img-part-2{
+    margin-right: 40px !important;
+}
+/* .why-choose-us-section {
+    background-color: #176457;
+    padding-bottom: 74px;
+    margin-top: 70px;
+    color: black;
+}
+
+.service-icon-choose{
+    width: 100px;
+    height: 70px;
+    margin-top: 40px;
+}
+.why-choose-us-section {
+    background-color: #176457;
+    padding-bottom: 74px;
+    margin-top: 70px;
+    color: black; 
+}
+
+.why-choose-us-title {
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 25px;
+    color: black; 
+    text-align: center;
+}
+.why-choose-us-paragraph {
+    width: 100%; 
+    text-align: justify;
+    font-weight: 500;
+    font-size: 18px;
+    padding-top: 20px;
+    margin: 0 auto; 
+}
+.why-col-para-bora{
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+.why-col-bold-bora{
+    text-align: justify;
+    width: 377px;
+    padding-top: 20px;
+    font-size: 18px;
+}
+.why-col-para-img-bor{
+    margin-top: 30px;
+    margin-left: -15px;
+    height: 300px;
+    width: 430px;
+    border-radius: 50px;
+} */
+.frequently-question{
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+
+}
+.have-a-question{
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+}
+.help-days-weeks{
+    font-weight: 400;
+    padding-bottom: 30px;
+    font-size: 18px;
+    color: #fff;
+
+}
+.faq {
+    margin-top: 80px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/Images/image15.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    background-attachment: fixed;
+}
+@media (max-width: 600px) {
+    .faq {
+        background-attachment: scroll; 
+        min-height: 100vh !important;
+        height: auto; 
+    }
+}
+/* .faq{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 60px;
+    margin-top: 70px;
+} */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    font-weight: 700 !important;
+    color: #fff;
+}
+.accordion-button {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    font-weight: 700;
+    color: #fff;
+}
+.accordion {
+    --bs-accordion-btn-focus-box-shadow: unset !important;
+}
+.accordion-body {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    font-weight: 700 !important;
+    color: #fff;
+}
+.accordion-item:first-of-type>.accordion-header .accordion-button {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    font-weight: 700 !important;
+    color: #fff;
+}
+@media (max-width: 1200px) {
+    .abtus-heading {
+        font-size: 2rem; /* Adjust heading size for tablets */
+    }
+    .breadcrumbt .breadcrumb .breadcrumb-item {
+        font-size: 12px; /* Adjust font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    #about {
+        height: 50vh; /* Increase height for smaller screens */
+    }
+    .abtus-heading {
+        font-size: 1.5rem; /* Further adjust heading size for mobile */
+    }
+    .breadcrumbt .breadcrumb .breadcrumb-item {
+        font-size: 11px; /* Adjust font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        height: 60vh; /* Increase height for very small screens */
+    }
+    .abtus-heading {
+        font-size: 1.25rem; /* Further adjust heading size for very small screens */
+    }
+    .breadcrumbt .breadcrumb .breadcrumb-item {
+        font-size: 10px; /* Adjust font size for very small screens */
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .vision-mission-title {
+        font-size: 30px; /* Adjust title size for tablets */
+    }
+
+    .vision-mission-paragraph, .vision-mission-paragraph-2 {
+        font-size: 15px; /* Adjust font size for better readability on tablets */
+    }
+
+    .vision-mission-img {
+        height: 250px;
+        width: 450px; /* Adjust image size for tablets */
+    }
+
+    #vision-mission-img-part-2 {
+        margin-right: 20px !important; /* Adjust margin for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .vision-mission-title {
+        font-size: 24px; /* Further adjust title size for mobile */
+    }
+
+    .vision-mission-paragraph, .vision-mission-paragraph-2 {
+        font-size: 14px; /* Adjust font size for mobile */
+        padding-top: 15px; /* Adjust padding for mobile */
+    }
+
+    .vision-mission-img {
+        height: 200px;
+        width: 100%; /* Make image full width on mobile */
+        margin: 20px 0; /* Adjust margin for mobile */
+    }
+
+    #vision-mission-img-part-2 {
+        margin-right: 0 !important; /* Remove margin for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .vision-mission-title {
+        font-size: 20px; /* Further adjust title size for very small screens */
+    }
+
+    .vision-mission-paragraph, .vision-mission-paragraph-2 {
+        font-size: 10px; /* Further adjust font size for very small screens */
+    }
+
+    .vision-mission-img {
+        height: 150px;
+        width: 100%; /* Ensure image fits within small screens */
+    }
+
+    #vision-mission-img-part-2 {
+        margin-right: 0 !important; /* Ensure no margin on very small screens */
+    }
+}
+.why-choose-us-section {
+    background-color: #176457;
+    padding-bottom: 74px;
+    margin-top: 70px;
+    color: black; /* Ensure text is visible on dark background */
+    box-sizing: border-box;
+    width: 100%;
+}
+.mob-res-over-flowing{
+    width: 100% !important;
+}
+.service-icon-choose {
+    width: 100px;
+    height: 70px;
+    margin-top: 40px;
+    padding-left: 23px;
+}
+
+.why-choose-us-title {
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 25px;
+    color: black; /* Ensure text is visible on dark background */
+    text-align: center; /* Center align title */
+}
+
+.why-choose-us-paragraph {
+    width: 100%; /* Make paragraph width responsive */
+    text-align: justify;
+    font-weight: 500;
+    font-size: 18px;
+    padding-top: 20px;
+    margin: 0 auto; /* Center align paragraph */
+}
+
+.why-col-para-bora {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.why-col-bold-bora {
+    text-align: justify;
+    font-size: 18px;
+    padding-top: 20px;
+    width: 405px;
+}
+
+.why-col-para-img-bor {
+    margin-top: 30px;
+    height: 300px;
+    width: 100%; /* Make image responsive */
+    border-radius: 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .why-choose-us-title {
+        font-size: 30px; /* Adjust title size for tablets */
+    }
+
+    .why-choose-us-paragraph {
+        font-size: 16px; /* Adjust font size for better readability on tablets */
+        padding-left: 15px; /* Add padding for better spacing */
+        padding-right: 15px; /* Add padding for better spacing */
+    }
+
+    .why-col-para-bora {
+        font-size: 18px; /* Adjust font size for headings */
+    }
+
+    .why-col-bold-bora {
+        width: 100%; /* Make text width responsive */
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-us-title {
+        font-size: 24px; /* Further adjust title size for mobile */
+    }
+    .mob-res-over-flowing{
+        width: 100% !important;
+    }
+    .why-choose-us-paragraph {
+        font-size: 14px; /* Adjust font size for mobile */
+        padding-left: 10px; /* Reduce padding for better fit */
+        padding-right: 10px; /* Reduce padding for better fit */
+    }
+
+    .why-col-para-bora {
+        font-size: 16px; /* Adjust font size for headings */
+    }
+
+    .why-col-bold-bora {
+        font-size: 16px; /* Adjust font size for mobile */
+        width: 100%; /* Make text width responsive */
+        padding-left: 20px !important;
+    }
+
+    .why-col-para-img-bor {
+        height: 200px; /* Adjust height for images on mobile */
+        width: 100%; /* Make images responsive */
+        margin-left: 0; /* Remove negative margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .why-choose-us-title {
+        font-size: 20px; /* Further adjust title size for very small screens */
+        padding-left: 15px;
+        width: 100%;
+    }
+    .mob-res-over-flowing{
+        width: 100% !important;
+    }
+    .why-choose-us-paragraph {
+        font-size: 12px; /* Further adjust font size for very small screens */
+        padding-left: 5px; /* Reduce padding for better fit */
+        padding-right: 5px; /* Reduce padding for better fit */
+    }
+
+    .why-col-para-bora {
+        font-size: 14px; /* Further adjust font size for headings */
+        padding-left: 15px;
+    }
+
+    .why-col-bold-bora {
+        font-size: 14px; /* Further adjust font size for mobile */
+        width: 100%; /* Make text width responsive */
+    }
+
+    .why-col-para-img-bor {
+        height: 150px; /* Further adjust height for images on very small screens */
+    }
+}

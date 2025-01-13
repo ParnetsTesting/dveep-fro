@@ -1,0 +1,138 @@
+.custom-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px;
+    height: 356px;
+    transition: transform 0.3s ease;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .custom-card-body {
+    padding: 20px;
+  }
+  
+  .custom-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #176457;
+    font-family: "Lato",sans-serif;
+    font-weight: 600;
+  }
+  
+  .custom-card-text {
+    font-size: 1rem;
+    color: #333;
+    padding-top: 10px;
+    font-family: 'revicons';
+  }
+  .custom-card:hover {
+    background-color: #F1FaFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  .heading{
+    font-size: 45px;
+    font-weight: 700;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: #176457;
+    font-family: 'Roboto';
+    text-align: center;
+  
+  }
+  /* Mobile (up to 464px) */
+@media (max-width: 464px) {
+  .heading {
+    font-size: 20px !important;
+          padding-top: 30px;
+      padding-bottom: 20px;
+  }
+
+  .custom-card {
+      width: 250px !important;
+      height: auto;
+      margin: 0 auto;
+  }
+
+  .custom-card-body {
+      padding: 10px;
+      width: 250px !important;
+  }
+
+  .custom-card-title {
+      font-size: 1.2rem;
+  }
+
+  .custom-card-text {
+      font-size: 0.9rem;
+  }
+}
+
+/* Tablet (464px to 1024px) */
+@media (min-width: 464px) and (max-width: 1024px) {
+  .heading {
+      font-size: 35px;
+      padding-top: 40px;
+      padding-bottom: 25px;
+  }
+
+  .custom-card {
+      width: 250px !important;
+      height: auto;
+      margin: 0 auto;
+  }
+
+  .custom-card-body {
+      padding: 15px;
+  }
+
+  .custom-card-title {
+      font-size: 1.4rem;
+  }
+
+  .custom-card-text {
+      font-size: 0.95rem;
+  }
+}
+
+/* Laptop (1025px to 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .heading {
+      font-size: 40px;
+      padding-top: 45px;
+      padding-bottom: 30px;
+  }
+
+  .custom-card {
+      width: 350px;
+      height: 230px;
+      margin: 0 auto;
+  }
+
+  .custom-card-body {
+      padding: 15px;
+  }
+
+  .custom-card-title {
+      font-size: 1.4rem;
+  }
+
+  .custom-card-text {
+      font-size: 1rem;
+  }
+}
+
+.slick-item {
+  margin: 0 5px;
+  background-color: #e5e5e5;
+  aspect-ratio: 1.3/1;
+  max-width: 280px;
+}
+.custom-card{
+  width: 380px !important;
+}

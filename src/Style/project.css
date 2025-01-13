@@ -1,0 +1,134 @@
+.know-more-btn {
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: #176457;
+    color: white;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-right: auto;
+    display: block;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    /* margin-right: calc(-.5* var(--bs-gutter-x)); */
+    margin-left: calc(-.5* var(--bs-gutter-x));
+}
+/* Project Card Styling */
+.card-img-project {
+    width: 100%; /* Make images responsive */
+    height: 600px; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add slight border-radius */
+}
+
+.project-title-home {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center; /* Center the title */
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.project-para-home {
+    font-size: 16px;
+    text-align: center; /* Center the description */
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+
+/* Large Devices (Laptop) */
+@media (min-width: 992px) {
+    .col-md-6 {
+        flex: 0 0 50%; /* Two items per row */
+        max-width: 50%;
+    }
+}
+
+/* Medium Devices (Tablet) */
+@media (max-width: 991px) {
+    .col-md-6 {
+        flex: 0 0 50%; /* Two items per row */
+        max-width: 50%;
+    }
+
+    .project-title-home {
+        font-size: 18px;
+    }
+
+    .project-para-home {
+        font-size: 14px;
+    }
+
+    .know-more-btn {
+        width: 100px;
+        font-size: 14px;
+    }
+}
+
+/* Small Devices (Mobile) */
+@media (max-width: 767px) {
+    .col-md-6 {
+        flex: 0 0 100%; /* One item per row */
+        max-width: 100%;
+    }
+
+    .project-title-home {
+        font-size: 16px;
+    }
+
+    .project-para-home {
+        font-size: 14px;
+    }
+
+    .know-more-btn {
+        width: 100px;
+        font-size: 14px;
+    }
+    .card-img-project {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 1200px) {
+    .abtus-heading {
+        font-size: 2rem; /* Adjust heading size for tablets */
+    }
+    .breadcrumbt .breadcrumb .breadcrumb-item {
+        font-size: 12px; /* Adjust font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    #about {
+        height: 50vh; /* Increase height for smaller screens */
+    }
+    .abtus-heading {
+        font-size: 1.5rem; /* Further adjust heading size for mobile */
+    }
+    .breadcrumbt .breadcrumb .breadcrumb-item {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        height: 60vh; /* Increase height for very small screens */
+    }
+    .abtus-heading {
+        font-size: 1.25rem; /* Further adjust heading size for very small screens */
+    }
+    .breadcrumbt .breadcrumb .breadcrumb-item {
+        font-size: 10px; /* Adjust font size for very small screens */
+    }
+    .breadcrumbt{
+        padding-top: 38px;
+    }
+}

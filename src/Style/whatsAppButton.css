@@ -1,0 +1,53 @@
+.whatsapp-button {
+    position: fixed; /* Fixes the button in the viewport */
+    bottom: 70px; /* Adjust the distance from the bottom */
+    right: 0px; /* Adjust the distance from the right */
+    border: none;
+    padding: 10px 17px; 
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    /* color: green; */
+    background: none; 
+    z-index: 1000; /* Ensures it stays on top of other content */
+  }
+  
+  .whatsapp-button:hover {
+    color: darkgreen; /* Darken the color on hover */
+  }
+  
+  .whatsapp-icon {
+    margin-right: 5px; /* Adjust margin as needed */
+    font-size: 44px; /* Increase the icon size */
+    position: relative; /* Relative positioning for fine adjustments */
+    top: 0; /* Reset vertical position adjustment */
+  }
+  @media only screen and (max-width: 600px) {
+    .whatsapp-button {
+      bottom: 45px;
+      right: 0px;
+      padding: 4px 0px;
+    }
+
+    .whatsapp-icon {
+      height: 40px !important;
+      width: 40px !important;
+    }
+ 
+}
+
+@media only screen and (max-width: 400px) {
+    .whatsapp-button {
+      bottom: 45px;
+      right: 0px;
+      padding: 4px 0px;
+    }
+
+    .whatsapp-icon {
+      height: 40px !important;
+      width: 40px !important;
+    }
+ 
+}

@@ -1,0 +1,127 @@
+/* Ensure the background image covers the section */
+#plain-back-image {
+    background-image: url("/public/Images/image123.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5% 0; /* Adjust padding for better spacing */
+    overflow: hidden;
+    /* background-attachment: fixed; */
+}
+#plain-back-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* background:green; */
+    opacity: 0.7;
+    z-index: -1;
+}
+#plain-back-image {
+    position: relative; /* Make sure the container is positioned */
+    z-index: 2; /* Give a higher z-index to the content */
+}
+
+
+/* Adjust padding and text alignment */
+.chooseSection {
+    padding: 5% 10%; /* Add some padding for spacing */
+    text-align: left; /* Align text to the left */
+}
+
+/* Expertise section */
+.Expertise > h5 {
+    font-size: 24px;
+    color:#176457 !important;
+}
+
+.Expertise .tyrue {
+    display: none;
+}
+
+.Expertise:hover .tyrue {
+    display: block !important;
+}
+
+/* numdiv styling */
+.numdiv {
+    margin: 10px auto; /* Center the content and add spacing */
+    padding: 15px;
+    width: 90%; /* Make sure the box is responsive */
+    box-shadow: rgba(222, 222, 223, 0.25) 0px 13px 27px -5px, rgba(225, 221, 221, 0.3) 0px 8px 16px -8px;
+}
+
+.numdiv:hover {
+    box-shadow: rgba(105, 103, 103, 0.1) 0px 20px 20px 0px inset, rgba(174, 174, 181, 0.25) 0px 40px 40px -20px, rgba(189, 180, 180, 0.3) 0px 30px 60px -30px;
+}
+
+/* Number styling */
+.nums {
+    font-size: 40px; /* Adjust font size for better visibility */
+    font-weight: bold;
+    color:white;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.numText {
+    font-weight: bold;
+    font-size: 16px; /* Adjust font size for mobile screens */
+    text-align: center;
+    color: white;
+}
+
+/* Sort-down icon color */
+.fa-sort-down {
+    color: #176457;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 991px) {
+    .chooseSection {
+        padding: 5% 5%; /* Adjust padding for tablet screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .mob-res-para-orange{
+        text-align: justify;
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        margin-left: 16px;
+    }
+    .chooseSection {
+        padding: 5% 2%; /* Reduce padding on smaller screens */
+        text-align: center; /* Center align text on smaller screens */
+    }
+    .text-light{
+        text-align: left !important;
+    }
+    .Expertise h5 {
+        font-size: 23px; /* Adjust font size for smaller screens */
+        font-weight: 700;
+    }
+
+    .Expertise p {
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+    .numdiv {
+        width: 100%; /* Ensure the numdiv takes full width */
+        padding: 10px;
+    }
+
+    .nums {
+        font-size: 30px; /* Adjust font size for smaller screens */
+    }
+
+    .numText {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    /* Ensure proper spacing for mobile images */
+    .plain-image-mobile-res {
+        margin-top: 20px; /* Adjust margin for mobile screens */
+    }
+}
