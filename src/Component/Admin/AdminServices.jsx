@@ -43,7 +43,7 @@ const AdminServices = () => {
         const config = {
           url: "/createInvestInDveep",
           method: "post",
-          baseURL: "http://localhost:8989/api/homeInvestInDveep",
+          baseURL: "https://dveep-backend.onrender.com/api/homeInvestInDveep",
           headers: { "content-type": "multipart/form-data" },
           data: {
             image1: ImageIcon,
@@ -71,7 +71,7 @@ const AdminServices = () => {
     const getWhyDveep= async () => {
       try {
         let res = await axios.get(
-          "http://localhost:8989/api/homeInvestInDveep/getInvestInDveep"
+          "https://dveep-backend.onrender.com/api/homeInvestInDveep/getInvestInDveep"
         );
         if (res.status === 201) {
           setDveep(res.data.data1);
@@ -90,7 +90,7 @@ const AdminServices = () => {
         const config = {
           url: "/updateInvestInDveep/" + DveepId,
           method: "put",
-          baseURL: "http://localhost:8989/api/homeInvestInDveep",
+          baseURL: "https://dveep-backend.onrender.com/api/homeInvestInDveep",
           headers: { "content-type": "multipart/form-data" },
           data: {
             image1: ImageIcon,
@@ -117,7 +117,7 @@ const AdminServices = () => {
     const DeleteWhyDveep = async () => {
       try {
         let res = await axios.delete(
-          `http://localhost:8989/api/homeInvestInDveep/deleteInvestInDveep/${DveepId}`
+          `https://dveep-backend.onrender.com/api/homeInvestInDveep/deleteInvestInDveep/${DveepId}`
         );
         if (res.status === 201) {
           toast.success(res.data.sucess);
@@ -170,7 +170,7 @@ const AdminServices = () => {
       
         <td>
           <img
-                src={`http://localhost:8989/InvestInDveep/${item?.image1}`}
+                src={`https://dveep-backend.onrender.com/InvestInDveep/${item?.image1}`}
                 alt="pic"
                 style={{ width: "75px", height: "75px" }}
               /> 

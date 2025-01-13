@@ -42,7 +42,7 @@ function AdminGetInTouch() {
       const config = {
         url: "/createGetInTouch",
         method: "post",
-        baseURL: "http://localhost:8989/api/aboutGetInTouch",
+        baseURL: "https://dveep-backend.onrender.com/api/aboutGetInTouch",
         headers: { "content-type": "multipart/form-data" },
         data: {
           image: Image,
@@ -65,7 +65,7 @@ function AdminGetInTouch() {
   const getGetInTouchImage = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/aboutGetInTouch/getGetInTouch"
+        "https://dveep-backend.onrender.com/api/aboutGetInTouch/getGetInTouch"
       );
       if (res.status === 201) {
         setGetInTouch(res.data.data1);
@@ -82,7 +82,7 @@ function AdminGetInTouch() {
       const config = {
         url: "/updateGetInTouch/" + GetInTouchId,
         method: "put",
-        baseURL: "http://localhost:8989/api/aboutGetInTouch",
+        baseURL: "https://dveep-backend.onrender.com/api/aboutGetInTouch",
         headers: { "content-type": "multipart/form-data" },
         data: {
           image: Image,
@@ -102,7 +102,7 @@ function AdminGetInTouch() {
 
   //  const DeleteWelcomeNote=async()=>{
   //    try {
-  //      let  res=await axios.delete(`http://localhost:8989/api/galleryGalleryBanner/deleteGalleryBanner/${GalleryBannerId}`);
+  //      let  res=await axios.delete(`https://dveep-backend.onrender.com/api/galleryGalleryBanner/deleteGalleryBanner/${GalleryBannerId}`);
   //      if(res.status===201){
   //        toast.success(res.data.message);
   //        getGetInTouchImage();
@@ -151,7 +151,7 @@ function AdminGetInTouch() {
 
                     <td>
                       <img
-                        src={`http://localhost:8989/About/${item?.image}`}
+                        src={`https://dveep-backend.onrender.com/About/${item?.image}`}
                         alt="pic"
                         style={{ width: "75px", height: "75px" }}
                       />

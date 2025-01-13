@@ -42,7 +42,7 @@ const GalleryVideo = async () => {
     const config = {
       url: "/createVideo",
       method: "post",
-      baseURL: "http://localhost:8989/api/galleryVideo",
+      baseURL: "https://dveep-backend.onrender.com/api/galleryVideo",
       headers: { "content-type": "multipart/form-data" },
       data: {
         video:Video,
@@ -65,7 +65,7 @@ const [GalleryVideo1, setGalleryVideo1] = useState([]);
 const getGalleryVideo = async () => {
   try {
     let res = await axios.get(
-      "http://localhost:8989/api/galleryVideo/getVideo"
+      "https://dveep-backend.onrender.com/api/galleryVideo/getVideo"
     );
     if (res.status === 201) {
       setGalleryVideo1(res.data.data1);
@@ -82,7 +82,7 @@ try {
   const config={
     url:"/updateVideo/"+GalleryVideoId,
     method:"put",
-    baseURL:"http://localhost:8989/api/galleryVideo",
+    baseURL:"https://dveep-backend.onrender.com/api/galleryVideo",
     headers:{"content-type":"multipart/form-data"},
     data:{
       video:Video,
@@ -105,7 +105,7 @@ try {
 
 const DeleteGalleryImage=async()=>{
 try {
-  let  res=await axios.delete(`http://localhost:8989/api/galleryVideo/deleteVideo/${GalleryVideoId}`);
+  let  res=await axios.delete(`https://dveep-backend.onrender.com/api/galleryVideo/deleteVideo/${GalleryVideoId}`);
   if(res.status===201){
     toast.success(res.data.message);
     getGalleryVideo();
@@ -155,7 +155,7 @@ useEffect(() => {
   
                   <td>
                   <video
-  src={`http://localhost:8989/GalleryBannery/${item?.video}`}
+  src={`https://dveep-backend.onrender.com/GalleryBannery/${item?.video}`}
   alt="pic"
   style={{ width: "75px", height: "75px" }}
   controls

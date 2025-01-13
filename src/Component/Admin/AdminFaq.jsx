@@ -43,7 +43,7 @@ const AdminFaq = () => {
         const config = {
           url: "/createFaq",
           method: "post",
-          baseURL: "http://localhost:8989/api/homeFaq",
+          baseURL: "https://dveep-backend.onrender.com/api/homeFaq",
           headers: { "content-type": "application/json" },
           data: {
             question:Question,
@@ -68,7 +68,7 @@ const [FAQ, setFAQ] = useState([]);
     const getFaq= async () => {
       try {
         let res = await axios.get(
-          "http://localhost:8989/api/homeFaq/getFaq"
+          "https://dveep-backend.onrender.com/api/homeFaq/getFaq"
         );
         if (res.status === 201) {
           setFAQ(res.data.data1);
@@ -88,7 +88,7 @@ const [FAQID, setFAQID] = useState("");
         const config = {
           url: "/updateFaq/" + FAQID,
           method: "put",
-          baseURL: "http://localhost:8989/api/homeFaq",
+          baseURL: "https://dveep-backend.onrender.com/api/homeFaq",
           headers: { "content-type": "application/json" },
           data: {
             question:Question,
@@ -111,7 +111,7 @@ const [FAQID, setFAQID] = useState("");
     const DeleteFaq= async () => {
       try {
         let res = await axios.delete(
-          `http://localhost:8989/api/homeFaq/deleteFaq/${FAQID}`
+          `https://dveep-backend.onrender.com/api/homeFaq/deleteFaq/${FAQID}`
         );
         if (res.status === 201) {
           toast.success(res.data.message);

@@ -44,7 +44,7 @@ const AddAboutBanner= async () => {
     const config = {
       url: "/createAboutBanner",
       method: "post",
-      baseURL: "http://localhost:8989/api/aboutBanner",
+      baseURL: "https://dveep-backend.onrender.com/api/aboutBanner",
       headers: { "content-type": "multipart/form-data" },
       data: {
         image:AboutImage,
@@ -71,7 +71,7 @@ const [AboutBanner, setAboutBanner] = useState([]);
 const getAboutBanner = async () => {
   try {
     let res = await axios.get(
-      "http://localhost:8989/api/aboutBanner/getAboutBanner"
+      "https://dveep-backend.onrender.com/api/aboutBanner/getAboutBanner"
     );
     if (res.status === 201) {
       setAboutBanner(res.data.data1);
@@ -88,7 +88,7 @@ try {
   const config={
     url:"/updateAboutBanner/"+AboutBannerId,
     method:"put",
-    baseURL:"http://localhost:8989/api/aboutBanner",
+    baseURL:"https://dveep-backend.onrender.com/api/aboutBanner",
     headers:{"content-type":"multipart/form-data"},
     data:{
       image:AboutImage,
@@ -113,7 +113,7 @@ try {
 
 const DeleteAboutBanner=async()=>{
 try {
-  let  res=await axios.delete(`http://localhost:8989/api/aboutBanner/deleteAboutBanner/${AboutBannerId}`);
+  let  res=await axios.delete(`https://dveep-backend.onrender.com/api/aboutBanner/deleteAboutBanner/${AboutBannerId}`);
   if(res.status===201){
     toast.success(res.data.message);
     getAboutBanner();
@@ -166,7 +166,7 @@ useEffect(() => {
   
     <td>
       <img
-            src={`http://localhost:8989/About/${item?.image}`}
+            src={`https://dveep-backend.onrender.com/About/${item?.image}`}
             alt="pic"
             style={{ width: "75px", height: "75px" }}
           />

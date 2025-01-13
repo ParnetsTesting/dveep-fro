@@ -50,7 +50,7 @@
 //     const config={
 //       url:"/createBrowseOurLatestProject",
 //       method:"post",
-//       baseURL:"http://localhost:8989/api/homeBrowseOurLatestProject",
+//       baseURL:"https://dveep-backend.onrender.com/api/homeBrowseOurLatestProject",
 //       headers:{"content-type":"multipart/form-data"},
 //       data:{
 //         desc1:Desc,
@@ -79,7 +79,7 @@
 
 // const getBrowseProject=async()=>{
 //   try {
-//     let res=await axios.get("http://localhost:8989/api/homeBrowseOurLatestProject/getBrowseOurLatestProject");
+//     let res=await axios.get("https://dveep-backend.onrender.com/api/homeBrowseOurLatestProject/getBrowseOurLatestProject");
 
 //   if(res.status===201){
 //     setProjects(res.data.data1);
@@ -97,7 +97,7 @@
 //     const config={
 //       url:"/updateBrowseOurLatestProject/"+BrowseProjectId,
 //       method:"put",
-//       baseURL:"http://localhost:8989/api/homeBrowseOurLatestProject",
+//       baseURL:"https://dveep-backend.onrender.com/api/homeBrowseOurLatestProject",
 //       headers:{"content-type":"multipart/form-data"},
 //       data:{
 //         desc1:Desc,
@@ -125,7 +125,7 @@
 
 // const DeleteBrowseProject=async()=>{
 //   try {
-//     let res=await axios.delete(`http://localhost:8989/api/homeBrowseOurLatestProject/deleteBrowseOurLatestProject/${BrowseProjectId}`);
+//     let res=await axios.delete(`https://dveep-backend.onrender.com/api/homeBrowseOurLatestProject/deleteBrowseOurLatestProject/${BrowseProjectId}`);
 //     if(res.status===201){
 //       toast.success(res.data.message);
 //       getBrowseProject();
@@ -177,7 +177,7 @@
 //                   <td style={{ paddingTop: "10px" }}>{parse(`<div>${item?.desc1}</div>`)}</td>
 //                   <td>
 //                     <Image
-//                           src={`http://localhost:8989/BrowseProject/${item?.projectImage}`}
+//                           src={`https://dveep-backend.onrender.com/BrowseProject/${item?.projectImage}`}
 //                           alt="pic"
 //                           style={{ width: "75px", height: "75px" }}
 //                         /> 

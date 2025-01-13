@@ -44,7 +44,7 @@ const AdminWelcomeNote = () => {
       const config = {
         url: "createWelcomeNote",
         method: "post",
-        baseURL: "http://localhost:8989/api/homeWelcomeNote",
+        baseURL: "https://dveep-backend.onrender.com/api/homeWelcomeNote",
         headers: { "content-type": "multipart/form-data" },
         data: {
           heading: Heading,
@@ -71,7 +71,7 @@ const AdminWelcomeNote = () => {
   const getWelcomeNote = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeWelcomeNote/getWelcomeNote"
+        "https://dveep-backend.onrender.com/api/homeWelcomeNote/getWelcomeNote"
       );
       if (res.status === 201) {
         setWelcome(res.data.data1);
@@ -88,7 +88,7 @@ const EditWelcomeNote=async()=>{
     const config={
       url:"/updateWelcomeNote/"+WelcomeNoteId,
       method:"put",
-      baseURL:"http://localhost:8989/api/homeWelcomeNote",
+      baseURL:"https://dveep-backend.onrender.com/api/homeWelcomeNote",
       headers:{"content-type":"multipart/form-data"},
       data:{
         heading: Heading,
@@ -113,7 +113,7 @@ console.log("EditWelcomeNote",EditWelcomeNote);
 
 const DeleteWelcomeNote=async()=>{
   try {
-    let  res=await axios.delete(`http://localhost:8989/api/homeWelcomeNote/deleteWelcomeNote/${WelcomeNoteId}`);
+    let  res=await axios.delete(`https://dveep-backend.onrender.com/api/homeWelcomeNote/deleteWelcomeNote/${WelcomeNoteId}`);
     if(res.status===201){
       toast.success(res.data.message);
       getWelcomeNote();
@@ -170,7 +170,7 @@ const DeleteWelcomeNote=async()=>{
                     </td>
                     <td>
                       <img
-                        src={`http://localhost:8989/WelcomeNote/${item?.image1}`}
+                        src={`https://dveep-backend.onrender.com/WelcomeNote/${item?.image1}`}
                         alt="pic"
                         style={{ width: "75px", height: "75px" }}
                       />

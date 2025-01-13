@@ -55,7 +55,7 @@ const Contactus = () => {
   const getConatactBanner = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/ContactBanner/getContactBanner"
+        "https://dveep-backend.onrender.com/api/ContactBanner/getContactBanner"
       );
       if (res.status === 201) {
         setConatactBanner(res.data.data1);
@@ -68,7 +68,7 @@ const Contactus = () => {
   const getConatactDetails = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/ContactUs/getContactUs"
+        "https://dveep-backend.onrender.com/api/ContactUs/getContactUs"
       );
       if (res.status === 201) {
         setContact(res.data.data1);
@@ -144,7 +144,7 @@ setloading(true)
       const config = {
         url: "createScheduleVisist",
         method: "post",
-        baseURL: "http://localhost:8989/api/ScheduleVisit/",
+        baseURL: "https://dveep-backend.onrender.com/api/ScheduleVisit/",
         headers: { "Content-Type": "application/json" },
         data: formData,
       };
@@ -174,7 +174,7 @@ setloading(true)
             style={{
               height: "40vh",
               width: "100%",
-              backgroundImage: `url(http://localhost:8989/Contact/${item?.contactImage})`,
+              backgroundImage: `url(https://dveep-backend.onrender.com/Contact/${item?.contactImage})`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
@@ -224,7 +224,7 @@ setloading(true)
                   <div className="custom-card-1" data-aos="flip-up">
                     <div className="card-flex">
                       <img
-                        src={`http://localhost:8989/Contact/${item?.icon}`}
+                        src={`https://dveep-backend.onrender.com/Contact/${item?.icon}`}
                         alt="Location Icon"
                         className="contact-icon-card"
                       />

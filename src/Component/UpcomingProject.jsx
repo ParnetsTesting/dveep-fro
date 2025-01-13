@@ -87,7 +87,7 @@ const UpcomingProject = (phoneNumber) => {
   const getProjectOverviewPage = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/ProjectOverview/getProjectOverview"
+        "https://dveep-backend.onrender.com/api/ProjectOverview/getProjectOverview"
       );
       if (res.status === 201) {
         setProjectOverview(res.data.data1);
@@ -101,7 +101,7 @@ const UpcomingProject = (phoneNumber) => {
   const getUpComingProject = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/UpComingProject/getUpComingProjectBanner"
+        "https://dveep-backend.onrender.com/api/UpComingProject/getUpComingProjectBanner"
       );
       if (res.status === 201) {
         setUpComingProject(res.data.data1);
@@ -126,7 +126,7 @@ const UpcomingProject = (phoneNumber) => {
               height: "40vh",
               width: "100%",
               zIndex: 2,
-              backgroundImage: `url(http://localhost:8989/UpComingProject/${item?.image})`,
+              backgroundImage: `url(https://dveep-backend.onrender.com/UpComingProject/${item?.image})`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
@@ -225,7 +225,7 @@ const UpcomingProject = (phoneNumber) => {
                           >
                             <div className="row">
                               <img
-                                src={`http://localhost:8989/ProjectOverview/${item?.Image3}`}
+                                src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.Image3}`}
                                 alt=""
                                 style={{
                                   width: "100%",

@@ -46,7 +46,7 @@ const Home = () => {
   console.log(FAQ, "DASD");
   const getFaq = async () => {
     try {
-      let res = await axios.get("http://localhost:8989/api/homeFaq/getFaq");
+      let res = await axios.get("https://dveep-backend.onrender.com/api/homeFaq/getFaq");
       if (res.status === 201) {
         setFAQ(res.data.data1);
       }
@@ -75,7 +75,7 @@ const Home = () => {
   const getProjectOverviewPage = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/ProjectOverview/getProjectOverview"
+        "https://dveep-backend.onrender.com/api/ProjectOverview/getProjectOverview"
       );
       if (res.status === 201) {
         setProjectOverview(res.data.data1);
@@ -88,7 +88,7 @@ const Home = () => {
   // Download Brochure PDF
   const BroucherDownload = () => {
     // Get the PDF URL
-    const brochurePdf = `http://localhost:8989/ProjectOverview/${Demo?.brochure}`;
+    const brochurePdf = `https://dveep-backend.onrender.com/ProjectOverview/${Demo?.brochure}`;
 
     // Open the PDF in a new browser tab/window
     window.open(brochurePdf, "_blank");
@@ -115,7 +115,7 @@ const Home = () => {
       const config = {
         url: "downloadbrochure",
         method: "post",
-        baseURL: "http://localhost:8989/api/DownloadBrochure/",
+        baseURL: "https://dveep-backend.onrender.com/api/DownloadBrochure/",
         headers: { "Content-Type": "application/json" },
         data: formData,
       };
@@ -212,7 +212,7 @@ const Home = () => {
   const getHomeslider = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeBanner/getHomeBanner"
+        "https://dveep-backend.onrender.com/api/homeBanner/getHomeBanner"
       );
       if (res.status === 201) {
         setBanner(res.data.data2);
@@ -231,7 +231,7 @@ const Home = () => {
   const getWhyDveep = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeInvestInDveep/getInvestInDveep"
+        "https://dveep-backend.onrender.com/api/homeInvestInDveep/getInvestInDveep"
       );
       if (res.status === 201) {
         setDveep(res.data.data1);
@@ -301,7 +301,7 @@ const Home = () => {
         const config = {
           url: "createScheduleVisist",
           method: "post",
-          baseURL: "http://localhost:8989/api/ScheduleVisit/",
+          baseURL: "https://dveep-backend.onrender.com/api/ScheduleVisit/",
           headers: { "Content-Type": "application/json" },
           data: formData,
         };
@@ -329,7 +329,7 @@ const Home = () => {
           return (
             <Carousel.Item className="carousel-item">
               <img
-                src={`http://localhost:8989/HomeBanner/${item?.bannerImg}`}
+                src={`https://dveep-backend.onrender.com/HomeBanner/${item?.bannerImg}`}
                 alt=""
                 className="cor-img-h-w"
               />
@@ -482,7 +482,7 @@ const Home = () => {
               <div className="row position-relative">
                 <div className="col-md-6 mt-4 position-relative">
                   <img
-                    src={`http://localhost:8989/ProjectOverview/${item?.Image3}`}
+                    src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.Image3}`}
                     alt=""
                     style={{
                       width: "100%",
@@ -865,7 +865,7 @@ const Home = () => {
                           >
                             <div className="row">
                               <img
-                                src={`http://localhost:8989/ProjectOverview/${item?.Image3}`}
+                                src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.Image3}`}
                                 alt=""
                                 style={{
                                   width: "100%",
@@ -986,7 +986,7 @@ const Home = () => {
                   <div className="d-flex flex-column col-lg-12">
                   <div className="d-flex justify-content-center align-items-center">
                       <img
-                        src={`http://localhost:8989/InvestInDveep/${Dveep[0]?.image1}`}
+                        src={`https://dveep-backend.onrender.com/InvestInDveep/${Dveep[0]?.image1}`}
                         alt=""
                         className="service-img-icon"
                       />
@@ -1001,7 +1001,7 @@ const Home = () => {
                   <div className="d-flex flex-column col-lg-12">
                   <div className="d-flex justify-content-center align-items-center">
                       <img
-                        src={`http://localhost:8989/InvestInDveep/${Dveep[1]?.image1}`}
+                        src={`https://dveep-backend.onrender.com/InvestInDveep/${Dveep[1]?.image1}`}
                         alt=""
                         className="service-img-icon"
                       />
@@ -1024,7 +1024,7 @@ const Home = () => {
                   <div className="d-flex flex-column col-lg-12">
                   <div className="d-flex justify-content-center align-items-center">
                       <img
-                        src={`http://localhost:8989/InvestInDveep/${Dveep[2]?.image1}`}
+                        src={`https://dveep-backend.onrender.com/InvestInDveep/${Dveep[2]?.image1}`}
                         alt=""
                         className="service-img-icon"
                       />
@@ -1039,7 +1039,7 @@ const Home = () => {
                   <div className="d-flex flex-column col-lg-12">
                     <div className="d-flex justify-content-center align-items-center">
                       <img
-                        src={`http://localhost:8989/InvestInDveep/${Dveep[3]?.image1}`}
+                        src={`https://dveep-backend.onrender.com/InvestInDveep/${Dveep[3]?.image1}`}
                         alt=""
                         className="service-img-icon"
                       />

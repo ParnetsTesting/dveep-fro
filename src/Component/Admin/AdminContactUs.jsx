@@ -44,7 +44,7 @@ const AdminContactUs = () => {
       const config = {
         url: "/createContactUs",
         method: "post",
-        baseURL: "http://localhost:8989/api/ContactUs",
+        baseURL: "https://dveep-backend.onrender.com/api/ContactUs",
         headers: { "content-type": "multipart/form-data" },
         data: {
           icon: ContactIcon,
@@ -68,7 +68,7 @@ const AdminContactUs = () => {
   const getConatactDetails = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/ContactUs/getContactUs"
+        "https://dveep-backend.onrender.com/api/ContactUs/getContactUs"
       );
       if (res.status === 201) {
         setContact(res.data.data1);
@@ -86,7 +86,7 @@ console.log("Contact",Contact);
       const config = {
         url: "/updateContactUs/" + ContactId,
         method: "put",
-        baseURL: "http://localhost:8989/api/ContactUs",
+        baseURL: "https://dveep-backend.onrender.com/api/ContactUs",
         headers: { "content-type": "multipart/form-data" },
         data: {
           icon: ContactIcon,
@@ -110,7 +110,7 @@ console.log("Contact",Contact);
   const DeleteContactDetails = async () => {
     try {
       let res = await axios.delete(
-        `http://localhost:8989/api/ContactUs/deleteContactUs/${ContactId}`
+        `https://dveep-backend.onrender.com/api/ContactUs/deleteContactUs/${ContactId}`
       );
       if (res.status === 201) {
         toast.success(res.data.message);
@@ -161,7 +161,7 @@ console.log("Contact",Contact);
                   <td>{i+1}</td>
                   <td>
                     <img
-                            src={`http://localhost:8989/Contact/${item?.icon}`}
+                            src={`https://dveep-backend.onrender.com/Contact/${item?.icon}`}
                             alt="pic"
                             style={{ width: "75px", height: "75px" }}
                           />

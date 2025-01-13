@@ -40,7 +40,7 @@ const [ScheduleVisit, setScheduleVisit] = useState([]);
 const getScheduleVisit= async () => {
 try {
  let res = await axios.get(
-   "http://localhost:8989/api/ScheduleVisit/getScheduleVisit"
+   "https://dveep-backend.onrender.com/api/ScheduleVisit/getScheduleVisit"
  );
  if (res.status === 201) {
   setScheduleVisit(res.data.data1);
@@ -61,7 +61,7 @@ const DeleteScheduleVisit  = async (id) => {
   }
   try {
     let res = await axios.delete(
-      `http://localhost:8989/api/ScheduleVisit/deleteScheduleVisit/${id}`
+      `https://dveep-backend.onrender.com/api/ScheduleVisit/deleteScheduleVisit/${id}`
     );
     if (res.status === 201) {
       toast.success(res.data.sucess);

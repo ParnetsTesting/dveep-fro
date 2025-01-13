@@ -42,7 +42,7 @@ const GalleryImage = async () => {
     const config = {
       url: "/createImage",
       method: "post",
-      baseURL: "http://localhost:8989/api/galleryImage",
+      baseURL: "https://dveep-backend.onrender.com/api/galleryImage",
       headers: { "content-type": "multipart/form-data" },
       data: {
         image:Image,
@@ -65,7 +65,7 @@ const [GalleryImage1, setGalleryImage1] = useState([]);
 const getGalleryImage = async () => {
   try {
     let res = await axios.get(
-      "http://localhost:8989/api/galleryImage/getImage"
+      "https://dveep-backend.onrender.com/api/galleryImage/getImage"
     );
     if (res.status === 201) {
       setGalleryImage1(res.data.data1);
@@ -82,7 +82,7 @@ try {
   const config={
     url:"/updateImage/"+GalleryImageId,
     method:"put",
-    baseURL:"http://localhost:8989/api/galleryImage",
+    baseURL:"https://dveep-backend.onrender.com/api/galleryImage",
     headers:{"content-type":"multipart/form-data"},
     data:{
       image:Image,
@@ -105,7 +105,7 @@ try {
 
 const DeleteGalleryImage=async()=>{
 try {
-  let  res=await axios.delete(`http://localhost:8989/api/galleryImage/deleteImage/${GalleryImageId}`);
+  let  res=await axios.delete(`https://dveep-backend.onrender.com/api/galleryImage/deleteImage/${GalleryImageId}`);
   if(res.status===201){
     toast.success(res.data.message);
     getGalleryImage();
@@ -156,7 +156,7 @@ useEffect(() => {
   
     <td>
       <img
-            src={`http://localhost:8989/GalleryBannery/${item?.image}`}
+            src={`https://dveep-backend.onrender.com/GalleryBannery/${item?.image}`}
             alt="pic"
             style={{ width: "75px", height: "75px" }}
           /> 

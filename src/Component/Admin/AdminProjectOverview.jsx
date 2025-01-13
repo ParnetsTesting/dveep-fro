@@ -236,7 +236,7 @@ setTitle("");
       const config = {
         url: "/createProjectOverview",
         method: "post",
-        baseURL: "http://localhost:8989/api/ProjectOverview",
+        baseURL: "https://dveep-backend.onrender.com/api/ProjectOverview",
         headers: { "content-type": "multipart/form-data" },
         data: formData,
       };
@@ -250,7 +250,7 @@ setTitle("");
           const config = {
             url: "/uploadimages",
             method: "put",
-            baseURL: "http://localhost:8989/api/ProjectOverview",
+            baseURL: "https://dveep-backend.onrender.com/api/ProjectOverview",
             headers: { "content-type": "multipart/form-data" },
             data: {
               productId: res.data.newProjectOverview?._id,
@@ -297,7 +297,7 @@ setTitle("");
   const getProjectOverviewPage = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/ProjectOverview/getProjectOverview"
+        "https://dveep-backend.onrender.com/api/ProjectOverview/getProjectOverview"
       );
       if (res.status === 201) {
         setProjectOverview(res.data.data1);
@@ -331,7 +331,7 @@ setTitle("");
       const config = {
         url: "/updateProjectOverview/" + ProjectOverviewId,
         method: "put",
-        baseURL: "http://localhost:8989/api/ProjectOverview",
+        baseURL: "https://dveep-backend.onrender.com/api/ProjectOverview",
         headers: { "content-type": "multipart/form-data" },
         data: formData,
       };
@@ -360,7 +360,7 @@ setTitle("");
   const DeleteProjectOverview = async () => {
     try {
       let res = await axios.delete(
-        `http://localhost:8989/api/ProjectOverview/deleteProjectOverview/${ProjectOverviewId}`
+        `https://dveep-backend.onrender.com/api/ProjectOverview/deleteProjectOverview/${ProjectOverviewId}`
       );
       if (res.status === 201) {
         toast.success(res.data.message);
@@ -386,7 +386,7 @@ setTitle("");
       const config = {
         url: "/editimages",
         method: "put",
-        baseURL: "http://localhost:8989/api/ProjectOverview",
+        baseURL: "https://dveep-backend.onrender.com/api/ProjectOverview",
         headers: { "content-type": "multipart/form-data" },
         data: {
           projectid: ViewImages?._id,
@@ -410,7 +410,7 @@ setTitle("");
     
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/PropertyOverview/getPropertyOverview"
+        "https://dveep-backend.onrender.com/api/PropertyOverview/getPropertyOverview"
       );
       if (res.status === 201) {
         setPropertyOverview1(res.data.data1);
@@ -446,7 +446,7 @@ setTitle("");
   const getFeaturesAndAminities = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/FeatureAndAminities/getFeatureAndAminities"
+        "https://dveep-backend.onrender.com/api/FeatureAndAminities/getFeatureAndAminities"
       );
       if (res.status === 201) {
         setFeatures(res.data.data1);
@@ -510,7 +510,7 @@ console.log(Features);
                     <td>{item.SelectType}</td>
                     {/* <td>
                       <img
-                        src={`http://localhost:8989/ProjectOverview/${item?.Image1}`}
+                        src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.Image1}`}
                         alt="pic"
                         style={{ width: "75px", height: "75px" }}
                       />
@@ -533,7 +533,7 @@ console.log(Features);
                     </td>
                     <td>
                       <img
-                        src={`http://localhost:8989/ProjectOverview/${item?.Image3}`}
+                        src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.Image3}`}
                         alt="pic"
                         style={{ width: "75px", height: "75px" }}
                       />
@@ -547,7 +547,7 @@ console.log(Features);
                         muted
                       >
                         <source
-                          src={`http://localhost:8989/ProjectOverview/${item?.video}`}
+                          src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.video}`}
                           type="file"
                           accept="video/*"
                         />
@@ -555,7 +555,7 @@ console.log(Features);
                     </td>
                     <td>
                       <img
-                        src={`http://localhost:8989/ProjectOverview/${item?.Image4}`}
+                        src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.Image4}`}
                         alt="pic"
                         style={{ width: "75px", height: "75px" }}
                       />
@@ -575,7 +575,7 @@ console.log(Features);
                     </td>
                     <td>
                       {/* <img
-                        src={`http://localhost:8989/ProjectOverview/${item?.Icon}`}
+                        src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.Icon}`}
                         alt="pic"
                         style={{ width: "75px", height: "75px" }}
                       /> */}
@@ -1155,7 +1155,7 @@ console.log(Features);
       <td>{index + 1}</td>
       <td>
         <img
-          src={`http://localhost:8989/PropertyOverview/${e?.value.Icon}`}
+          src={`https://dveep-backend.onrender.com/PropertyOverview/${e?.value.Icon}`}
           alt={`Gallery Image ${index + 1}`}
           style={{ width: "100px", height: "auto" }}
         />
@@ -1249,7 +1249,7 @@ console.log(Features);
                         <td>{i + 1}</td>
                         <td>
                           <img
-                            src={`http://localhost:8989/ProjectOverview/${item?.swiperimages}`}
+                            src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.swiperimages}`}
                             alt="lt"
                             style={{ width: "75px", height: "75px" }}
                           />
@@ -1319,7 +1319,7 @@ console.log(Features);
                 <iframe
                   title="brochure"
                   style={{ width: "100%", height: "500px", overflow: "hidden" }}
-                  src={`http://localhost:8989/ProjectOverview/${View?.brochure}`}
+                  src={`https://dveep-backend.onrender.com/ProjectOverview/${View?.brochure}`}
                 ></iframe>
               </div>
             </div>

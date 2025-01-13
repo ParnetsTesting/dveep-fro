@@ -40,7 +40,7 @@ const ProjectOverview = () => {
   const getProjectOverviewPage = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/ProjectOverview/getProjectOverview"
+        "https://dveep-backend.onrender.com/api/ProjectOverview/getProjectOverview"
       );
       if (res.status === 201) {
         setProjectOverview(res.data.data1);
@@ -68,7 +68,7 @@ const ProjectOverview = () => {
   const getPropertyOverview = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/PropertyOverview/getPropertyOverview"
+        "https://dveep-backend.onrender.com/api/PropertyOverview/getPropertyOverview"
       );
       if (res.status === 201) {
         setPropertyOverview1(res.data.data1);
@@ -82,7 +82,7 @@ const ProjectOverview = () => {
   const getFeaturesAndAminities = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/FeatureAndAminities/getFeatureAndAminities"
+        "https://dveep-backend.onrender.com/api/FeatureAndAminities/getFeatureAndAminities"
       );
       if (res.status === 201) {
         setFeatures(res.data.data1);
@@ -160,7 +160,7 @@ const ProjectOverview = () => {
   const getUploadBrochure = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/UploadBrochure/getUploadBrochure"
+        "https://dveep-backend.onrender.com/api/UploadBrochure/getUploadBrochure"
       );
       if (res.status === 201) {
         setBrouchurList(res.data.data1?.[0]);
@@ -176,7 +176,7 @@ const ProjectOverview = () => {
  // Download Brochure PDF
  const BroucherDownload = () => {
   // Get the PDF URL
-  const brochurePdf = `http://localhost:8989/ProjectOverview/${Demo?.brochure}`;
+  const brochurePdf = `https://dveep-backend.onrender.com/ProjectOverview/${Demo?.brochure}`;
 
   // Open the PDF in a new browser tab/window
   window.open(brochurePdf, "_blank");
@@ -198,7 +198,7 @@ const ProjectOverview = () => {
       const config = {
         url: "downloadbrochure",
         method: "post",
-        baseURL: "http://localhost:8989/api/DownloadBrochure/",
+        baseURL: "https://dveep-backend.onrender.com/api/DownloadBrochure/",
         headers: { "Content-Type": "application/json" },
         data: formData,
       };
@@ -276,7 +276,7 @@ const ProjectOverview = () => {
         const config = {
           url: "createScheduleVisist",
           method: "post",
-          baseURL: "http://localhost:8989/api/ScheduleVisit/",
+          baseURL: "https://dveep-backend.onrender.com/api/ScheduleVisit/",
           headers: { "Content-Type": "application/json" },
           data: formData,
         };
@@ -315,7 +315,7 @@ const ProjectOverview = () => {
           </div>
           <div className="col-md-4" style={{ marginTop: "60px" }}>
             <img
-              src={`http://localhost:8989/ProjectOverview/${data?.Image3}`}
+              src={`https://dveep-backend.onrender.com/ProjectOverview/${data?.Image3}`}
               alt=""
               style={{ height: "300px", width: "350px", marginTop: "61px" }}
               className="card-img-mob-res"
@@ -338,7 +338,7 @@ const ProjectOverview = () => {
                 data-aos-duration="3000"
               >
                 <source
-                  src={`http://localhost:8989/ProjectOverview/${data?.video}`}
+                  src={`https://dveep-backend.onrender.com/ProjectOverview/${data?.video}`}
                   type="video/mp4"
                 />
               </video>
@@ -532,7 +532,7 @@ const ProjectOverview = () => {
              {data?.Property?.map((e) => {
               return( <li>
                 <div className="property-grid-list-icon">
-                  <img decoding="async" src={`http://localhost:8989/PropertyOverview/${e?.value.Icon}`}
+                  <img decoding="async" src={`https://dveep-backend.onrender.com/PropertyOverview/${e?.value.Icon}`}
                   alt="" />
                 </div>
                 <div className="property-grid-list-details">
@@ -591,7 +591,7 @@ const ProjectOverview = () => {
           <div className="row rw-style">
             <div className="col-md-6 mg-wg-jd">
               <img
-                src={`http://localhost:8989/ProjectOverview/${data?.Image4}`}
+                src={`https://dveep-backend.onrender.com/ProjectOverview/${data?.Image4}`}
                 alt="pic"
               />
             </div>

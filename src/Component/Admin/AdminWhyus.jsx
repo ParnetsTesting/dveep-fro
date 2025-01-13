@@ -51,7 +51,7 @@ const [Heading, setHeading] = useState('');
       const config = {
         url: "/createWhyChooseUs",
         method: "post",
-        baseURL: "http://localhost:8989/api/homeWhyChooseUs",
+        baseURL: "https://dveep-backend.onrender.com/api/homeWhyChooseUs",
         headers: { "content-type": "application/json" },
         data: {
           heading:Heading,
@@ -78,7 +78,7 @@ const [Heading, setHeading] = useState('');
   const getWhyChooseUs= async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeWhyChooseUs/getWhyChooseUs"
+        "https://dveep-backend.onrender.com/api/homeWhyChooseUs/getWhyChooseUs"
       );
       if (res.status === 201) {
         setWhyChooseUs(res.data.data1);
@@ -97,7 +97,7 @@ const EditWhyChooseUs= async () => {
       const config = {
         url: "/updateWhyChooseUs/" + WhyChooseUsId,
         method: "put",
-        baseURL: "http://localhost:8989/api/homeWhyChooseUs",
+        baseURL: "https://dveep-backend.onrender.com/api/homeWhyChooseUs",
         headers: { "content-type": "application/json" },
         data: {
           heading:Heading,
@@ -121,7 +121,7 @@ const EditWhyChooseUs= async () => {
   const DeleteWhyChooseUs = async () => {
     try {
       let res = await axios.delete(
-        `http://localhost:8989/api/homeWhyChooseUs/deleteWhyChooseUs/${WhyChooseUsId}`
+        `https://dveep-backend.onrender.com/api/homeWhyChooseUs/deleteWhyChooseUs/${WhyChooseUsId}`
       );
       if (res.status === 201) {
         toast.success(res.data.message);
@@ -141,7 +141,7 @@ const EditWhyChooseUs= async () => {
       const config = {
         url: "/crateOurWork",
         method: "post",
-        baseURL: "http://localhost:8989/api/homeOurWork",
+        baseURL: "https://dveep-backend.onrender.com/api/homeOurWork",
         headers: { "content-type": "application/json" },
         data: {
           title:Title,
@@ -168,7 +168,7 @@ const [OurWork, setOurWork] = useState([]);
   const getOurWork= async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeOurWork/getOurWork"
+        "https://dveep-backend.onrender.com/api/homeOurWork/getOurWork"
       );
       if (res.status === 201) {
         setOurWork(res.data.data1);
@@ -187,7 +187,7 @@ const EditOurWork= async () => {
       const config = {
         url: "/updateOurWork/" + OurWorkId,
         method: "put",
-        baseURL: "http://localhost:8989/api/homeOurWork",
+        baseURL: "https://dveep-backend.onrender.com/api/homeOurWork",
         headers: { "content-type": "application/json" },
         data: {
           title:Title,
@@ -211,7 +211,7 @@ const EditOurWork= async () => {
   const DeleteOurWork = async () => {
     try {
       let res = await axios.delete(
-        `http://localhost:8989/api/homeOurWork/deleteOurWork/${OurWorkId}`
+        `https://dveep-backend.onrender.com/api/homeOurWork/deleteOurWork/${OurWorkId}`
       );
       if (res.status === 201) {
         toast.success(res.data.message);
@@ -238,7 +238,7 @@ const AddNumbers = async () => {
     const config = {
       url: "/createNumbers",
       method: "post",
-      baseURL: "http://localhost:8989/api/homeNumbers",
+      baseURL: "https://dveep-backend.onrender.com/api/homeNumbers",
       headers: { "content-type": "application/json" },
       data: {
         title:Title1,
@@ -263,7 +263,7 @@ const [Numbers, setNumbers] = useState([])
 const getNumbers = async () => {
   try {
     let res = await axios.get(
-      "http://localhost:8989/api/homeNumbers/getNumbers"
+      "https://dveep-backend.onrender.com/api/homeNumbers/getNumbers"
     );
     if (res.status === 201) {
       setNumbers(res.data.data1);
@@ -282,7 +282,7 @@ const EditNumbers= async () => {
     const config = {
       url: "/updateNumbers/" + NumbersId,
       method: "put",
-      baseURL: "http://localhost:8989/api/homeNumbers",
+      baseURL: "https://dveep-backend.onrender.com/api/homeNumbers",
       headers: { "content-type": "application/json" },
       data: {
         title:Title1,
@@ -306,7 +306,7 @@ const EditNumbers= async () => {
 const DeleteNumbers = async () => {
   try {
     let res = await axios.delete(
-      `http://localhost:8989/api/homeNumbers/deleteNumbers/${NumbersId}`
+      `https://dveep-backend.onrender.com/api/homeNumbers/deleteNumbers/${NumbersId}`
     );
     if (res.status === 201) {
       toast.success(res.data.message);

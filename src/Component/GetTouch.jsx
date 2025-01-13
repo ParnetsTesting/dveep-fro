@@ -14,7 +14,7 @@ const GetTouch = () => {
     const getGetInTouchImage = async () => {
       try {
         let res = await axios.get(
-          "http://localhost:8989/api/aboutGetInTouch/getGetInTouch"
+          "https://dveep-backend.onrender.com/api/aboutGetInTouch/getGetInTouch"
         );
         if (res.status === 201) {
          setGetInTouch(res.data.data1);
@@ -38,13 +38,13 @@ const GetTouch = () => {
             <div className="container "  data-aos="zoom-in-down">
                 <div className="row">
                 <div className="col-md-4">
-                    <img src={`http://localhost:8989/About/${imagesTouch[0]}`} alt="" className='get-in-touch-img' data-aos="flip-left" />
+                    <img src={`https://dveep-backend.onrender.com/About/${imagesTouch[0]}`} alt="" className='get-in-touch-img' data-aos="flip-left" />
                 </div>
                 <div className="col-md-4">
-                <img src={`http://localhost:8989/About/${imagesTouch[1]}`} alt="" id='middle-img-up' data-aos="flip-left"/>
+                <img src={`https://dveep-backend.onrender.com/About/${imagesTouch[1]}`} alt="" id='middle-img-up' data-aos="flip-left"/>
                 </div>
                 <div className="col-md-4">
-                <img src={`http://localhost:8989/About/${imagesTouch[2]}`} alt="" className='get-in-touch-img' data-aos="flip-left"/>
+                <img src={`https://dveep-backend.onrender.com/About/${imagesTouch[2]}`} alt="" className='get-in-touch-img' data-aos="flip-left"/>
                 </div>
                 </div>
                 <div className="row">
@@ -59,13 +59,13 @@ const GetTouch = () => {
                 </div>
                 <div className="row">
                 <div className="col-md-4">
-                <img src={`http://localhost:8989/About/${imagesTouch[3]}`} alt="" className='get-in-touch-img'  data-aos="flip-right" />
+                <img src={`https://dveep-backend.onrender.com/About/${imagesTouch[3]}`} alt="" className='get-in-touch-img'  data-aos="flip-right" />
                 </div>
                 <div className="col-md-4">
-                <img src={`http://localhost:8989/About/${imagesTouch[4]}`} alt="" id='middle-img-down'   data-aos="flip-right"/>
+                <img src={`https://dveep-backend.onrender.com/About/${imagesTouch[4]}`} alt="" id='middle-img-down'   data-aos="flip-right"/>
                 </div>
                 <div className="col-md-4">
-                <img src={`http://localhost:8989/About/${imagesTouch[5]}`} alt="" className='get-in-touch-img'  data-aos="flip-right"/>
+                <img src={`https://dveep-backend.onrender.com/About/${imagesTouch[5]}`} alt="" className='get-in-touch-img'  data-aos="flip-right"/>
                 </div>
                 </div>
             </div>

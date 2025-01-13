@@ -45,7 +45,7 @@ const AdminSlider = () => {
       const config = {
         url: "/createHomeBanner",
         method: "post",
-        baseURL: "http://localhost:8989/api/homeBanner",
+        baseURL: "https://dveep-backend.onrender.com/api/homeBanner",
         headers: { "content-type": "multipart/form-data" },
         data: {
           bannerImg: BannerImage,
@@ -74,7 +74,7 @@ const AdminSlider = () => {
   const getHomeslider = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeBanner/getHomeBanner"
+        "https://dveep-backend.onrender.com/api/homeBanner/getHomeBanner"
       );
       if (res.status === 201) {
         setBanner(res.data.data2);
@@ -93,7 +93,7 @@ const AdminSlider = () => {
       const config = {
         url: "/updateHomeBanner/" + HomeBannerId,
         method: "put",
-        baseURL: "http://localhost:8989/api/homeBanner",
+        baseURL: "https://dveep-backend.onrender.com/api/homeBanner",
         headers: { "content-type": "multipart/form-data" },
         data: {
           bannerImg: BannerImage,
@@ -119,7 +119,7 @@ const AdminSlider = () => {
   const DeleteHomeSlider = async () => {
     try {
       let res = await axios.delete(
-        `http://localhost:8989/api/homeBanner/deleteHomeBanner/${HomeBannerId}`
+        `https://dveep-backend.onrender.com/api/homeBanner/deleteHomeBanner/${HomeBannerId}`
       );
       if (res.status === 201) {
         toast.success(res.data.message);
@@ -171,7 +171,7 @@ const AdminSlider = () => {
                     <td>{++i}</td>
                     <td>
                       <Image
-                        src={`http://localhost:8989/homeBanner/${item?.bannerImg}`}
+                        src={`https://dveep-backend.onrender.com/homeBanner/${item?.bannerImg}`}
                         alt="pic"
                         style={{ width: "75px", height: "75px" }}
                       />

@@ -44,7 +44,7 @@ const AdminGalleryBanner = () => {
         const config = {
           url: "/createGalleryBanner",
           method: "post",
-          baseURL: "http://localhost:8989/api/galleryGalleryBanner",
+          baseURL: "https://dveep-backend.onrender.com/api/galleryGalleryBanner",
           headers: { "content-type": "multipart/form-data" },
           data: {
             image:Image,
@@ -69,7 +69,7 @@ const AdminGalleryBanner = () => {
     const getGalleryBanner = async () => {
       try {
         let res = await axios.get(
-          "http://localhost:8989/api/galleryGalleryBanner/getGalleryBanner"
+          "https://dveep-backend.onrender.com/api/galleryGalleryBanner/getGalleryBanner"
         );
         if (res.status === 201) {
           setGalleryBanner(res.data.data1);
@@ -86,7 +86,7 @@ const AdminGalleryBanner = () => {
       const config={
         url:"/updateGalleryBanner/"+GalleryBannerId,
         method:"put",
-        baseURL:"http://localhost:8989/api/galleryGalleryBanner",
+        baseURL:"https://dveep-backend.onrender.com/api/galleryGalleryBanner",
         headers:{"content-type":"multipart/form-data"},
         data:{
           image:Image,
@@ -108,7 +108,7 @@ const AdminGalleryBanner = () => {
   
   const DeleteWelcomeNote=async()=>{
     try {
-      let  res=await axios.delete(`http://localhost:8989/api/galleryGalleryBanner/deleteGalleryBanner/${GalleryBannerId}`);
+      let  res=await axios.delete(`https://dveep-backend.onrender.com/api/galleryGalleryBanner/deleteGalleryBanner/${GalleryBannerId}`);
       if(res.status===201){
         toast.success(res.data.message);
         getGalleryBanner();
@@ -160,7 +160,7 @@ const AdminGalleryBanner = () => {
                 
                   <td>
                     <img
-                          src={`http://localhost:8989/GalleryBannery/${item?.image}`}
+                          src={`https://dveep-backend.onrender.com/GalleryBannery/${item?.image}`}
                           alt="pic"
                           style={{ width: "75px", height: "75px" }}
                         /> 

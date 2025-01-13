@@ -27,7 +27,7 @@ const AdminDownloadBrochure = () => {
       const config = {
         url: "/createDownloadBrochure",
         method: "post",
-        baseURL: "http://localhost:8989/api/DownloadBrochure",
+        baseURL: "https://dveep-backend.onrender.com/api/DownloadBrochure",
         headers: { "content-type": "multipart/form-data" },
         data: {
           name1: Name1,
@@ -51,7 +51,7 @@ const AdminDownloadBrochure = () => {
   const getDownloadBrochure = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/DownloadBrochure/getDownloadBrochure"
+        "https://dveep-backend.onrender.com/api/DownloadBrochure/getDownloadBrochure"
       );
       if (res.status === 201) {
         setDownloadBrochure(res.data.downloadlist);
@@ -69,7 +69,7 @@ console.log("DownloadBrochure",DownloadBrochure);
       const config = {
         url: "/updateDownloadBrochure/" + DownloadBrochureId,
         method: "put",
-        baseURL: "http://localhost:8989/api/DownloadBrochure",
+        baseURL: "https://dveep-backend.onrender.com/api/DownloadBrochure",
         headers: { "content-type": "multipart/form-data" },
         data: {
           name1: Name1,
@@ -93,7 +93,7 @@ console.log("DownloadBrochure",DownloadBrochure);
   const DeleteDownloadBrochure = async () => {
     try {
       let res = await axios.delete(
-        `http://localhost:8989/api/DownloadBrochure/deleteDownloadBrochure/${DownloadBrochureId}`
+        `https://dveep-backend.onrender.com/api/DownloadBrochure/deleteDownloadBrochure/${DownloadBrochureId}`
       );
       if (res.status === 201) {
         toast.success(res.data.message);
@@ -114,7 +114,7 @@ console.log("DownloadBrochure",DownloadBrochure);
       const config = {
         url: "/createUploadBrochure",
         method: "post",
-        baseURL: "http://localhost:8989/api/UploadBrochure",
+        baseURL: "https://dveep-backend.onrender.com/api/UploadBrochure",
         headers: { "content-type": "multipart/form-data" },
         data: formData,
       };
@@ -139,7 +139,7 @@ console.log("DownloadBrochure",DownloadBrochure);
   const getUploadBrochure = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/UploadBrochure/getUploadBrochure"
+        "https://dveep-backend.onrender.com/api/UploadBrochure/getUploadBrochure"
       );
       if (res.status === 201) {
         setBrouchurList(res.data.data1);
@@ -159,7 +159,7 @@ console.log("DownloadBrochure",DownloadBrochure);
       const config = {
         url: "/updateUploadBrochure/" + UploadBrochureId,
         method: "put",
-        baseURL: "http://localhost:8989/api/UploadBrochure",
+        baseURL: "https://dveep-backend.onrender.com/api/UploadBrochure",
         headers: { "content-type": "multipart/form-data" },
         data: {},
       };
@@ -184,7 +184,7 @@ console.log("DownloadBrochure",DownloadBrochure);
     }
     try {
       let res = await axios.delete(
-        `http://localhost:8989/api/UploadBrochure/deleteUploadBrochure/${id}`
+        `https://dveep-backend.onrender.com/api/UploadBrochure/deleteUploadBrochure/${id}`
       );
       if (res.status === 201) {
         toast.success(res.data.message);
@@ -244,7 +244,7 @@ console.log("DownloadBrochure",DownloadBrochure);
                   <td>{item?.useremail}</td>
                   <td>
                       <a
-                        href={`http://localhost:8989${item?.brochure}`}
+                        href={`https://dveep-backend.onrender.com${item?.brochure}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -342,7 +342,7 @@ console.log("DownloadBrochure",DownloadBrochure);
                     <td>{i + 1}</td>
                     <td>
                       <a
-                        href={`http://localhost:8989${item?.brochure}`}
+                        href={`https://dveep-backend.onrender.com${item?.brochure}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

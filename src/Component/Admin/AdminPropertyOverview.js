@@ -46,7 +46,7 @@ const AdminPropertyOverview = () => {
       const config = {
         url: "/createPropertyOverview",
         method: "post",
-        baseURL: "http://localhost:8989/api/PropertyOverview",
+        baseURL: "https://dveep-backend.onrender.com/api/PropertyOverview",
         headers: { "content-type": "multipart/form-data" },
         data: {
             Icon:Icon,
@@ -74,7 +74,7 @@ const [PropertyOverview1, setPropertyOverview1] = useState([]);
   const getPropertyOverview = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/PropertyOverview/getPropertyOverview"
+        "https://dveep-backend.onrender.com/api/PropertyOverview/getPropertyOverview"
       );
       if (res.status === 201) {
         setPropertyOverview1(res.data.data1);
@@ -93,7 +93,7 @@ const [PropertyOverview1, setPropertyOverview1] = useState([]);
       const config = {
         url: "/updatePropertyOverview/" + PropertyOverviewId,
         method: "put",
-        baseURL: "http://localhost:8989/api/PropertyOverview",
+        baseURL: "https://dveep-backend.onrender.com/api/PropertyOverview",
         headers: { "content-type": "multipart/form-data" },
         data: {
             Icon:Icon,
@@ -120,7 +120,7 @@ const [PropertyOverview1, setPropertyOverview1] = useState([]);
   const DeletePropertyOverview = async () => {
     try {
       let res = await axios.delete(
-        `http://localhost:8989/api/PropertyOverview/deleteProjectOverview/${PropertyOverviewId}`
+        `https://dveep-backend.onrender.com/api/PropertyOverview/deleteProjectOverview/${PropertyOverviewId}`
       );
       if (res.status === 201) {
         toast.success(res.data.message);
@@ -172,7 +172,7 @@ const [PropertyOverview1, setPropertyOverview1] = useState([]);
                     <td>{++i}</td>
                     <td>
                       <Image
-                        src={`http://localhost:8989/PropertyOverview/${item?.Icon}`}
+                        src={`https://dveep-backend.onrender.com/PropertyOverview/${item?.Icon}`}
                         alt="pic"
                         style={{ width: "75px", height: "75px" }}
                       />

@@ -99,7 +99,7 @@ const SignUp = () => {
         const config = {
           url: "/register",
           method: "post",
-          baseURL: "http://localhost:8989/api/user",
+          baseURL: "https://dveep-backend.onrender.com/api/user",
           headers: { "content-type": "application/json" },
           data: formdata,
         };

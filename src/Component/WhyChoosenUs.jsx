@@ -16,7 +16,7 @@ const WhyChoosenUs = () => {
   const getWhyChooseUs = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeWhyChooseUs/getWhyChooseUs"
+        "https://dveep-backend.onrender.com/api/homeWhyChooseUs/getWhyChooseUs"
       );
       if (res.status === 201) {
         setWhyChooseUs(res.data.data1);
@@ -31,7 +31,7 @@ const WhyChoosenUs = () => {
   const getOurWork = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeOurWork/getOurWork"
+        "https://dveep-backend.onrender.com/api/homeOurWork/getOurWork"
       );
       if (res.status === 201) {
         setOurWork(res.data.data1);
@@ -45,7 +45,7 @@ const WhyChoosenUs = () => {
   const getNumbers = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeNumbers/getNumbers"
+        "https://dveep-backend.onrender.com/api/homeNumbers/getNumbers"
       );
       if (res.status === 201) {
         setNumbers(res.data.data1);

@@ -20,7 +20,7 @@ const ReactSlickerComponent = () => {
   const getProjectOverviewPage = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/ProjectOverview/getProjectOverview"
+        "https://dveep-backend.onrender.com/api/ProjectOverview/getProjectOverview"
       );
       if (res.status === 201) {
         setProjectOverview(res.data.data1);
@@ -46,7 +46,7 @@ const ReactSlickerComponent = () => {
               <>
                     <div>
                       <img
-                        src={`http://localhost:8989/ProjectOverview/${item?.swiperimages}`}
+                        src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.swiperimages}`}
                         alt=""
                         width="100%"
                         height={400}
@@ -74,7 +74,7 @@ const ReactSlickerComponent = () => {
                     <div style={{ padding: "0 10px" }}>
                       <img
                         // src="../Images/about2.png"
-                        src={`http://localhost:8989/ProjectOverview/${item?.swiperimages}`}
+                        src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.swiperimages}`}
                         alt=""
                         width="100%"
                         height={150}

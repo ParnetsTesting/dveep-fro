@@ -43,7 +43,7 @@ const AdminFeaturesAndAminities = () => {
       const config = {
         url: "/createFeatureAndAminities",
         method: "post",
-        baseURL: "http://localhost:8989/api/FeatureAndAminities",
+        baseURL: "https://dveep-backend.onrender.com/api/FeatureAndAminities",
         headers: { "content-type": "application/json" },
         data: {
           text:Text
@@ -67,7 +67,7 @@ const [Features, setFeatures] = useState([]);
   const getFeaturesAndAminities = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/FeatureAndAminities/getFeatureAndAminities"
+        "https://dveep-backend.onrender.com/api/FeatureAndAminities/getFeatureAndAminities"
       );
       if (res.status === 201) {
         setFeatures(res.data.data1);
@@ -86,7 +86,7 @@ const [FeaturesId, setFeaturesId] = useState({});
       const config = {
         url: "/updateFeatureAndAminities/" + FeaturesId,
         method: "put",
-        baseURL: "http://localhost:8989/api/FeatureAndAminities",
+        baseURL: "https://dveep-backend.onrender.com/api/FeatureAndAminities",
         headers: { "content-type": "application/json" },
         data: {
           text:Text
@@ -108,7 +108,7 @@ const [FeaturesId, setFeaturesId] = useState({});
   const DeleteFeaturesAndAminities= async () => {
     try {
       let res = await axios.delete(
-        `http://localhost:8989/api/FeatureAndAminities/deleteFeatureAndAminities/${FeaturesId}`
+        `https://dveep-backend.onrender.com/api/FeatureAndAminities/deleteFeatureAndAminities/${FeaturesId}`
       );
       if (res.status === 201) {
         toast.success(res.data.message);

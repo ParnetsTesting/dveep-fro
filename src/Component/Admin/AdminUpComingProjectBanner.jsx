@@ -44,7 +44,7 @@ try {
   const config = {
     url: "/createUpComingProjectBanner",
     method: "post",
-    baseURL: "http://localhost:8989/api/UpComingProject",
+    baseURL: "https://dveep-backend.onrender.com/api/UpComingProject",
     headers: { "content-type": "multipart/form-data" },
     data: {
       image:UpcomingProjectImage,
@@ -70,7 +70,7 @@ const [UpComingProject, setUpComingProject] = useState([]);
 const getUpComingProject= async () => {
 try {
   let res = await axios.get(
-    "http://localhost:8989/api/UpComingProject/getUpComingProjectBanner"
+    "https://dveep-backend.onrender.com/api/UpComingProject/getUpComingProjectBanner"
   );
   if (res.status === 201) {
     setUpComingProject(res.data.data1);
@@ -87,7 +87,7 @@ try {
 const config={
   url:"/updateUpComingProjectBanner/"+UpComingProjectId,
   method:"put",
-  baseURL:"http://localhost:8989/api/UpComingProject",
+  baseURL:"https://dveep-backend.onrender.com/api/UpComingProject",
   headers:{"content-type":"multipart/form-data"},
   data:{
     image:UpcomingProjectImage,
@@ -112,7 +112,7 @@ toast.error(error.response.data.error);
 
 const DeleteUpComingProject=async()=>{
 try {
-let  res=await axios.delete(`http://localhost:8989/api/UpComingProject/deleteUpComingProjectBanner/${UpComingProjectId}`);
+let  res=await axios.delete(`https://dveep-backend.onrender.com/api/UpComingProject/deleteUpComingProjectBanner/${UpComingProjectId}`);
 if(res.status===201){
   toast.success(res.data.message);
   getUpComingProject();
@@ -165,7 +165,7 @@ useEffect(() => {
   
     <td>
       <img
-            src={`http://localhost:8989/UpComingProject/${item?.image}`}
+            src={`https://dveep-backend.onrender.com/UpComingProject/${item?.image}`}
             alt="pic"
             style={{ width: "75px", height: "75px" }}
           />

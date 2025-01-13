@@ -43,7 +43,7 @@ const AddAboutUs= async () => {
     const config = {
       url: "/createVissionAndMission",
       method: "post",
-      baseURL: "http://localhost:8989/api/aboutVissionAndMission",
+      baseURL: "https://dveep-backend.onrender.com/api/aboutVissionAndMission",
       headers: { "content-type": "multipart/form-data" },
       data: {
         image:Image,
@@ -69,7 +69,7 @@ const [AboutUs, setAboutUs] = useState([]);
 const getAboutUs = async () => {
   try {
     let res = await axios.get(
-      "http://localhost:8989/api/aboutVissionAndMission/getVissionAndMission"
+      "https://dveep-backend.onrender.com/api/aboutVissionAndMission/getVissionAndMission"
     );
     if (res.status === 201) {
       setAboutUs(res.data.data1);
@@ -86,7 +86,7 @@ try {
   const config={
     url:"/updateVissionAndMission/"+AboutUsId,
     method:"put",
-    baseURL:"http://localhost:8989/api/aboutVissionAndMission",
+    baseURL:"https://dveep-backend.onrender.com/api/aboutVissionAndMission",
     headers:{"content-type":"multipart/form-data"},
     data:{
         image:Image,
@@ -112,7 +112,7 @@ try {
 
 const DeleteAboutUs=async()=>{
 try {
-  let  res=await axios.delete(`http://localhost:8989/api/aboutVissionAndMission/deleteVissionAndMission/${AboutUsId}`);
+  let  res=await axios.delete(`https://dveep-backend.onrender.com/api/aboutVissionAndMission/deleteVissionAndMission/${AboutUsId}`);
   if(res.status===201){
     toast.success(res.data.message);
     getAboutUs();
@@ -165,7 +165,7 @@ useEffect(() => {
   
     <td>
       <img
-            src={`http://localhost:8989/About/${item?.image}`}
+            src={`https://dveep-backend.onrender.com/About/${item?.image}`}
             alt="pic"
             style={{ width: "75px", height: "75px" }}
           /> 

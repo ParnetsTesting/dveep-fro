@@ -48,7 +48,7 @@ const Aboutus = () => {
   const getAboutBanner = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/aboutBanner/getAboutBanner"
+        "https://dveep-backend.onrender.com/api/aboutBanner/getAboutBanner"
       );
       if (res.status === 201) {
         setAboutBanner(res.data.data1);
@@ -62,7 +62,7 @@ const Aboutus = () => {
   const getAboutUs = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/aboutVissionAndMission/getVissionAndMission"
+        "https://dveep-backend.onrender.com/api/aboutVissionAndMission/getVissionAndMission"
       );
       if (res.status === 201) {
         setAboutUs(res.data.data1);
@@ -90,7 +90,7 @@ const Aboutus = () => {
               height: "40vh",
               width: "100%",
               zIndex: 2,
-              backgroundImage: `url(http://localhost:8989/About/${item?.image})`,
+              backgroundImage: `url(https://dveep-backend.onrender.com/About/${item?.image})`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
@@ -160,7 +160,7 @@ const Aboutus = () => {
                     </div>
                     <div className="col-md-6">
                       <img
-                        src={`http://localhost:8989/About/${item?.image}`}
+                        src={`https://dveep-backend.onrender.com/About/${item?.image}`}
                         alt=""
                         className="vision-mission-img"
                       />
@@ -172,7 +172,7 @@ const Aboutus = () => {
                   <div className="row">
                   <div className="col-md-6">
                       <img
-                        src={`http://localhost:8989/About/${item?.image}`}
+                        src={`https://dveep-backend.onrender.com/About/${item?.image}`}
                         alt=""
                         className="vision-mission-img"
                       />

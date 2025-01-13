@@ -47,7 +47,7 @@
 //   const getGalleryBanner = async () => {
 //     try {
 //       let res = await axios.get(
-//         "http://localhost:8989/api/galleryGalleryBanner/getGalleryBanner"
+//         "https://dveep-backend.onrender.com/api/galleryGalleryBanner/getGalleryBanner"
 //       );
 //       if (res.status === 201) {
 //         setGalleryBanner(res.data.data1);
@@ -61,7 +61,7 @@
 // const getGalleryImage = async () => {
 //   try {
 //     let res = await axios.get(
-//       "http://localhost:8989/api/galleryImage/getImage"
+//       "https://dveep-backend.onrender.com/api/galleryImage/getImage"
 //     );
 //     if (res.status === 201) {
 //       setGalleryImage1(res.data.data1);
@@ -76,7 +76,7 @@
 // const getGalleryVideo = async () => {
 //   try {
 //     let res = await axios.get(
-//       "http://localhost:8989/api/galleryVideo/getVideo"
+//       "https://dveep-backend.onrender.com/api/galleryVideo/getVideo"
 //     );
 //     if (res.status === 201) {
 //       setGalleryVideo1(res.data.data1);
@@ -97,7 +97,7 @@
 //           <section className="gallery" style={{height: '40vh',
 //             width: '100%',
 //             zIndex: 2,
-//             backgroundImage: `url(http://localhost:8989/GalleryBannery/${item?.image})`,
+//             backgroundImage: `url(https://dveep-backend.onrender.com/GalleryBannery/${item?.image})`,
 //             backgroundPosition: 'center',
 //             backgroundRepeat: 'no-repeat',
 //             backgroundSize: 'cover',}}>
@@ -134,7 +134,7 @@
 //           {GalleryImage1?.map((item)=>{
 //             return(
 //               <div className="col-md-4">
-//               <img    src={`http://localhost:8989/GalleryBannery/${item?.image}`} alt="" className="gallery-page-image"  data-aos="flip-left" />
+//               <img    src={`https://dveep-backend.onrender.com/GalleryBannery/${item?.image}`} alt="" className="gallery-page-image"  data-aos="flip-left" />
 //             </div>
 //             )
 //           })}
@@ -145,7 +145,7 @@
 //             return(
 //               <div className="col-md-4">
 //               <video controls muted loop className="video-design-in-gallery" data-aos="flip-left">
-//                 <source src={`http://localhost:8989/GalleryBannery/${item?.video}`} type="video/mp4"  />
+//                 <source src={`https://dveep-backend.onrender.com/GalleryBannery/${item?.video}`} type="video/mp4"  />
 //               </video>
 //             </div>
 //             )

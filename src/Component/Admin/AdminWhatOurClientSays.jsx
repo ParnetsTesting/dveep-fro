@@ -43,7 +43,7 @@ const [Image, setImage] = useState('');
         const config = {
           url: "/createOurClientSays",
           method: "post",
-          baseURL: "http://localhost:8989/api/homeOurClientSays",
+          baseURL: "https://dveep-backend.onrender.com/api/homeOurClientSays",
           headers: { "content-type": "multipart/form-data" },
           data: {
             title:Title,
@@ -71,7 +71,7 @@ const [Image, setImage] = useState('');
     const getWhatOurClientSays= async () => {
       try {
         let res = await axios.get(
-          "http://localhost:8989/api/homeOurClientSays/getOurClientSays"
+          "https://dveep-backend.onrender.com/api/homeOurClientSays/getOurClientSays"
         );
         if (res.status === 201) {
           setWhatOurClientSays(res.data.data1);
@@ -91,7 +91,7 @@ const [WhatOurClientSaysId, setWhatOurClientSaysId] = useState("");
         const config = {
           url: "/updateOurClientSays/" + WhatOurClientSaysId,
           method: "put",
-          baseURL: "http://localhost:8989/api/homeOurClientSays",
+          baseURL: "https://dveep-backend.onrender.com/api/homeOurClientSays",
           headers: { "content-type": "multipart/form-data" },
           data: {
             title:Title,
@@ -117,7 +117,7 @@ const [WhatOurClientSaysId, setWhatOurClientSaysId] = useState("");
     const DeleteWhatOurClientSays= async () => {
       try {
         let res = await axios.delete(
-          `http://localhost:8989/api/homeOurClientSays/deleteOurClientSays/${WhatOurClientSaysId}`
+          `https://dveep-backend.onrender.com/api/homeOurClientSays/deleteOurClientSays/${WhatOurClientSaysId}`
         );
         if (res.status === 201) {
           toast.success(res.data.sucess);
@@ -173,7 +173,7 @@ const [WhatOurClientSaysId, setWhatOurClientSaysId] = useState("");
     </td>
     <td>
       <img
-            src={`http://localhost:8989/ClientSays/${item?.image}`}
+            src={`https://dveep-backend.onrender.com/ClientSays/${item?.image}`}
             alt="pic"
             style={{ width: "75px", height: "75px" }}
           />

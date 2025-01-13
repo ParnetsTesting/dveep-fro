@@ -10,7 +10,7 @@ const WelcomeHome = () => {
   const getWelcomeNote = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeWelcomeNote/getWelcomeNote"
+        "https://dveep-backend.onrender.com/api/homeWelcomeNote/getWelcomeNote"
       );
       if (res.status === 201) {
         setWelcome(res.data.data1);
@@ -32,7 +32,7 @@ const WelcomeHome = () => {
         position: 'relative',
         width: '100%',
         minHeight: '500px',
-        backgroundImage:`url(http://localhost:8989/WelcomeNote/${item?.image1})`,
+        backgroundImage:`url(https://dveep-backend.onrender.com/WelcomeNote/${item?.image1})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

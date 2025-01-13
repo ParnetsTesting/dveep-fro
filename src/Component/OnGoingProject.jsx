@@ -22,7 +22,7 @@ const OnGoingProject = (phoneNumber) => {
   const getProjectOverviewPage = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/ProjectOverview/getProjectOverview"
+        "https://dveep-backend.onrender.com/api/ProjectOverview/getProjectOverview"
       );
       if (res.status === 201) {
         setProjectOverview(res.data.data1);
@@ -98,7 +98,7 @@ const OnGoingProject = (phoneNumber) => {
   const getOnGoingProject = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/OnGoingProjectBanner/getOnGoingProjectBanner"
+        "https://dveep-backend.onrender.com/api/OnGoingProjectBanner/getOnGoingProjectBanner"
       );
       if (res.status === 201) {
         setOnGoingProject(res.data.data1);
@@ -118,7 +118,7 @@ const OnGoingProject = (phoneNumber) => {
   const getUploadBrochure = async () => {
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/UploadBrochure/getUploadBrochure"
+        "https://dveep-backend.onrender.com/api/UploadBrochure/getUploadBrochure"
       );
       if (res.status === 201) {
         setBrouchurList(res.data.data1?.[0]);
@@ -133,7 +133,7 @@ const OnGoingProject = (phoneNumber) => {
   // Download Brochure PDF
   const BroucherDownload = () => {
     // Get the PDF URL
-    const brochurePdf = `http://localhost:8989/ProjectOverview/${Demo?.brochure}`;
+    const brochurePdf = `https://dveep-backend.onrender.com/ProjectOverview/${Demo?.brochure}`;
 
     // Open the PDF in a new browser tab/window
     window.open(brochurePdf, "_blank");
@@ -161,7 +161,7 @@ const OnGoingProject = (phoneNumber) => {
       const config = {
         url: "downloadbrochure",
         method: "post",
-        baseURL: "http://localhost:8989/api/DownloadBrochure/",
+        baseURL: "https://dveep-backend.onrender.com/api/DownloadBrochure/",
         headers: { "Content-Type": "application/json" },
         data: formData,
       };
@@ -239,7 +239,7 @@ const OnGoingProject = (phoneNumber) => {
         const config = {
           url: "createScheduleVisist",
           method: "post",
-          baseURL: "http://localhost:8989/api/ScheduleVisit/",
+          baseURL: "https://dveep-backend.onrender.com/api/ScheduleVisit/",
           headers: { "Content-Type": "application/json" },
           data: formData,
         };
@@ -270,7 +270,7 @@ const OnGoingProject = (phoneNumber) => {
               height: "40vh",
               width: "100%",
               zIndex: 2,
-              backgroundImage: `url(http://localhost:8989/OnGoingProject/${item?.image})`,
+              backgroundImage: `url(https://dveep-backend.onrender.com/OnGoingProject/${item?.image})`,
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
@@ -315,7 +315,7 @@ const OnGoingProject = (phoneNumber) => {
               <div className="row" style={{ width: "100%" }}>
                 <div className="col-md-6 mt-4">
                   <img
-                    src={`http://localhost:8989/ProjectOverview/${item?.Image3}`}
+                    src={`https://dveep-backend.onrender.com/ProjectOverview/${item?.Image3}`}
                     alt=""
                     style={{
                       width: "100%",

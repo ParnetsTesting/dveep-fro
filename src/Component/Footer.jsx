@@ -19,7 +19,7 @@ const Footer = () => {
 
     try {
       let res = await axios.get(
-        "http://localhost:8989/api/homeWelcomeNote/getWelcomeNote"
+        "https://dveep-backend.onrender.com/api/homeWelcomeNote/getWelcomeNote"
       );
       if (res.status === 201) {
         setWelcome(res.data.data1);

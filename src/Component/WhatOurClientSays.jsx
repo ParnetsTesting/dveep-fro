@@ -49,7 +49,7 @@ const WhatOurClientSays = () => {
     const getWhatOurClientSays= async () => {
       try {
         let res = await axios.get(
-          "http://localhost:8989/api/homeOurClientSays/getOurClientSays"
+          "https://dveep-backend.onrender.com/api/homeOurClientSays/getOurClientSays"
         );
         if (res.status === 201) {
           setWhatOurClientSays(res.data.data1);
@@ -81,7 +81,7 @@ const WhatOurClientSays = () => {
       <div className="custom-card" style={{width:"380px",height:"800px !important"}}>
       <div className="custom-card-body">
         <div style={{display:"flex",justifyContent:"center"}}>
-        <img src={`http://localhost:8989/ClientSays/${item?.image}`} alt=""   style={{borderRadius:"50px",height:"100px",width:"100px"}}/>
+        <img src={`https://dveep-backend.onrender.com/ClientSays/${item?.image}`} alt=""   style={{borderRadius:"50px",height:"100px",width:"100px"}}/>
         </div>
         <p className="custom-card-text" style={{fontWeight:"500",textAlign:"justify"}}>{parse(`<div>${item?.desc}</div>`)}</p>
         <h3 className="custom-card-title">{item?.title}</h3>

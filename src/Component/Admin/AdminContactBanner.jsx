@@ -44,7 +44,7 @@ const ContactImage = async () => {
     const config = {
       url: "/createContactBanner",
       method: "post",
-      baseURL: "http://localhost:8989/api/ContactBanner",
+      baseURL: "https://dveep-backend.onrender.com/api/ContactBanner",
       headers: { "content-type": "multipart/form-data" },
       data: {
         contactImage:ConatctImage,
@@ -69,7 +69,7 @@ const [ConatactBanner, setConatactBanner] = useState([])
 const getConatactBanner = async () => {
   try {
     let res = await axios.get(
-      "http://localhost:8989/api/ContactBanner/getContactBanner"
+      "https://dveep-backend.onrender.com/api/ContactBanner/getContactBanner"
     );
     if (res.status === 201) {
       setConatactBanner(res.data.data1);
@@ -87,7 +87,7 @@ try {
   const config={
     url:"/updateContactBanner/"+ConatactBannerId,
     method:"put",
-    baseURL:"http://localhost:8989/api/ContactBanner",
+    baseURL:"https://dveep-backend.onrender.com/api/ContactBanner",
     headers:{"content-type":"multipart/form-data"},
     data:{
       contactImage:ConatctImage,
@@ -112,7 +112,7 @@ try {
 
 const DeleteGalleryImage=async()=>{
 try {
-  let  res=await axios.delete(`http://localhost:8989/api/ContactBanner/deleteContactBanner/${ConatactBannerId}`);
+  let  res=await axios.delete(`https://dveep-backend.onrender.com/api/ContactBanner/deleteContactBanner/${ConatactBannerId}`);
   if(res.status===201){
     toast.success(res.data.message);
     getConatactBanner();
@@ -164,7 +164,7 @@ useEffect(() => {
   
     <td>
       <img
-            src={`http://localhost:8989/Contact/${item?.contactImage}`}
+            src={`https://dveep-backend.onrender.com/Contact/${item?.contactImage}`}
             alt="pic"
             style={{ width: "75px", height: "75px" }}
           /> 
